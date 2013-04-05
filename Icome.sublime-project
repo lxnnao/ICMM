@@ -2,7 +2,13 @@
 	"folders":
 	[
 		{
-			"path": "/C/git/Icome"
+			"path": ".",
+			"folder_exclude_patterns": [".bundle",".idea","tmp","images","public/assets"],
+			"file_exclude_patterns": [".gitkeep",".tags*",".gemtags","*.sublime-workspace","*.sqlite3*"]
 		}
-	]
+	],
+    "settings":
+    {
+        "tab_size": 4
+    }
 }
