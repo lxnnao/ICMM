@@ -13,3 +13,12 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+*.sublime-workspace
+.idea/
+.yardoc/
+doc/
+public/assets/
+
+.tags*
+.gemtags
