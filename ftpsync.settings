@@ -1,0 +1,15 @@
+{
+    "icome":  // Used for Sublime Text 2 with FTPSync package
+    {
+        "host": "icome.sandisk.com",
+
+        "username": "icome",
+        "password": "icome",
+
+        "path": "~/icome",
+
+        "upload_on_save": true,
+        "download_on_open": false,
+        "overwrite_newer_prevention": false
+    }
+}
