@@ -9,6 +9,9 @@ gem 'sqlite3'
 gem 'therubyracer', :platforms => :ruby
 gem 'metro-ui-rails', :platforms => :ruby
 
+group :development do
+  gem 'meta_request'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
