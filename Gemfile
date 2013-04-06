@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 
 gem 'rails', '3.2.13'
 
@@ -6,7 +6,8 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'metro-ui-rails-cn', :git => "https://github.com/Eric-Guo/metro-ui-rails-cn.git", :branch => "metroway", :platforms => :ruby
+gem 'therubyracer', :platforms => :ruby
+gem 'metro-ui-rails', :platforms => :ruby
 
 
 # Gems used only for assets and not required

@@ -12,5 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require metro-ui-css-js
+//= require metro-ui
 //= require_tree .
