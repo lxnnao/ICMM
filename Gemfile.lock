@@ -65,7 +65,7 @@ GEM
     metro-ui-rails (0.15.8.14)
       less-rails (~> 2.2.3)
     mime-types (1.23)
-    multi_json (1.7.5)
+    multi_json (1.7.6)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -111,7 +111,7 @@ GEM
       ref
     thor (0.18.1)
     tilt (1.4.1)
-    treetop (1.4.12)
+    treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.37)
