@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+   <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title><%= content_for?(:title) ? yield(:title) : "Icome" %></title>
     <%= csrf_meta_tags %>
 
@@ -40,19 +41,24 @@
     <div class="page secondary fixed-header">
       <div class="page-header">
           <div class="page-header-content">
-              <div class="user-login">
+
+            <img style="position:absolute; left:70px" src="/srcImg/icomm.png" alt="" /></img>
+
+              <div class="user-login" style="position:absolute; left:400px">
                   <a href="#">
-                      <div class="name">
-                          <span class="first-name">Eric</span>
-                          <span class="last-name">Guo</span>
+                      <div class="name" >
+                          <span class="first-name fg-color-red">SanDisk</span>
+                          <span class="last-name">Employee</span>
                       </div>
                       <div class="avatar">
                           <i class="icon-user fg-color-white"></i>
                       </div>
                   </a>
+
               </div>
 
-              <h1 class="fg-color-white">I come!</h1>
+
+
           </div>
       </div>
 
