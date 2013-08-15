@@ -61,7 +61,7 @@ GEM
       railties
     metro-ui-rails (0.15.8.14)
       less-rails (~> 2.2.3)
-    mime-types (1.23)
+    mime-types (1.24)
     minitest (4.7.5)
     multi_json (1.7.9)
     polyglot (0.3.3)
