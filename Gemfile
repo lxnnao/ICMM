@@ -8,6 +8,7 @@ gem 'rails', '4.0.3'
 gem 'sqlite3'
 gem 'therubyracer', :platforms => :ruby
 gem 'metro-ui-rails', :platforms => :ruby
+gem 'less', '~> 2.3.3', :platforms => :ruby
 
 group :development do
   gem 'meta_request'
