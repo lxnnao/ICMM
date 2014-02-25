@@ -48,12 +48,32 @@
                   <a href="#">
                       <div class="name" >
                           <span class="first-name fg-color-red">SanDisk</span>
-                          <span class="last-name">Employee</span>
+
                       </div>
-                      <div class="avatar">
-                          <i class="icon-user fg-color-white"></i>
+                      <div>
+                          <ul class="nav navbar-nav navbar-right">
+                          <% if user_signed_in? -%>
+                                  <li class="dropdown">
+                                      <%= link_to edit_user_registration_path, class:     'dropdown-toggle',                      data:     { toggle: "dropdown" } do -%>
+                                      <%= current_user.email %><b class="caret"></b>
+                                      <% end -%>
+                                      <ul class="dropdown-menu">
+                                        <li><%= link_to 'Profile',    edit_user_registration_path %></li>
+                                        <li class="divider"></li>
+                                        <li><%= link_to 'Logout',     destroy_user_session_path, :method =>                         :delete %></li>
+                                      </ul>
+                                  </li>
+                          <% else -%>
+                              <li><%= link_to 'Sign In', new_user_session_path, class:     :active %></li>
+                              <li><%= link_to 'Register', new_user_registration_path,class: :active %></li>
+                          <% end -%>
+                          </ul>
                       </div>
                   </a>
+
+
+
+
 
               </div>
 
