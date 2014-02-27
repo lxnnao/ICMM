@@ -1,4 +1,4 @@
-class CompanyactivitysController < ApplicationController
+class CompanyActivitysController < ApplicationController
   def index
   	@activitys=CompanyActivity.all
   	render 'activities_show'

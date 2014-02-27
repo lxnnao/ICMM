@@ -1,7 +1,7 @@
 Icome::Application.routes.draw do
   devise_for :users
   root :to => 'homes#index'
-  resources :companyactivitys
+  resources :company_activitys
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
