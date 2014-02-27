@@ -1,4 +1,4 @@
-Icome
+Icomm
 =====
 
-Icome will be a application can create activities and allow user attend/enroll online.
+Icomm will be a application can create activities and allow user attend/enroll online.
