@@ -10,6 +10,10 @@ gem 'therubyracer', :platforms => :ruby
 gem 'metro-ui-rails', :platforms => :ruby
 gem 'less', '~> 2.3.3', :platforms => :ruby
 
+# Oracle adapter
+gem 'ruby-oci8', '~> 2.1.3'
+gem 'activerecord-oracle_enhanced-adapter', '~> 1.5'
+
 group :development do
   gem 'meta_request'
 end
