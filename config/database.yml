@@ -23,3 +23,11 @@ production:
   database: db/production.sqlite3
   pool: 5
   timeout: 5000
+eic_dev:
+  adapter: oracle_enhanced
+  database: EIC_DEV
+  username: eic
+  password: "eic"
+  pool: 5
+  timeout: 5000
+
