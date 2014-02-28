@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+<h1>Company activities</h1>
+<% @activitys.each do |activity| %>
+  <p>
+    <%= activity.action_name %>
+    <%= activity.action_eng_name %>
+    <%= activity.action_date %>
+    <%= activity.action_place %>
+		<%= activity.status %>
+  </p>
+
+  <p>
+    <%= activity.person %>
+    <%= activity.phone %>
+    <%= activity.email %>
+    <%= activity.action_time_qty %>
+    <%= activity.volunteer_qty %>
+    <%= activity.acter_qty %>
+    <%= activity.is_award %>
+    <%= activity.language_type %>
+    <%= activity.status %>
+    <%= activity.operator %>
+    <%= activity.create_time %>
+    <%= activity.update_time %>
+    <%= activity.remark %>
+  </p>
+<% end %>

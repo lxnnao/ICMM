@@ -1,13 +1,12 @@
-class CompanyActivitysController < ApplicationController
+class CompanyActivitiesController < ApplicationController
   def index
   	@activitys=CompanyActivity.all
-  	render 'activities_show'
   end
 
   # GET /companyactivitys/1
   # GET /companyactivitys/1.json
   def show
-    @activitys = CompanyActivity.find(params[:id])
+    @activity = CompanyActivity.find(params[:id])
     @last_name = cookies[:last_name]
     unless @last_name == nil
       @name = cookies[:name]
@@ -17,7 +16,7 @@ class CompanyActivitysController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @activitys }
+      format.xml  { render :xml => @activity }
     end
   end
   # GET /companyactivitys/new
@@ -75,7 +74,7 @@ class CompanyActivitysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def activity_params
-      params.require(:company_activity).permit(:action_eng_name, :action_name)
+      params.require(:company_activity).permit(:action_sys_id, :action_type)
     end
 
 end
