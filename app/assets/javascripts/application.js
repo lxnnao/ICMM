@@ -16,4 +16,5 @@
 //= require metro-ui/tile-slider
 //= require metro-ui/start-menu
 //= require metro-ui/tile-drag
+//= require metro-ui/dropdown
 //= require_tree .
