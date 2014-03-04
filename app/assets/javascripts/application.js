@@ -23,5 +23,4 @@
 //= require metro-ui/pagecontrol
 //= require metro-ui/rating
 //= require metro-ui/slider
-//= require_tree ./metro-ui-css
 //= require_tree .
