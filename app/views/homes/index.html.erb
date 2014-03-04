@@ -1,10 +1,10 @@
 <div class="page">
 <div class="nav-bar">
-    <div class="nav-bar-inner padding10">
+    <div class="nav-bar-inner padding10 fg-color-red">
         <span class="pull-menu"></span>
 
-        <a href="#"><span class="element brand">
-            SanDisk SDSS <small><!--?= include("version.phtml")?--></small>
+        <a href="#"><span class="element brand fg-color-red ">
+            <strong>SanDisk SDSS</strong>   <small><!--?= include("version.phtml")?--></small>
         </span></a>
 
         <div class="divider"></div>
@@ -14,26 +14,21 @@
             <li data-role="dropdown" class="">
                 <a href="#">公司活动</a>
                 <ul class="dropdown-menu" style="overflow: hidden; display: none;">
-                    <li><a href="global.php">全局样式</a></li>
-                    <li><a href="layout.php">布局与模板</a></li>
-                    <li><a href="grid.php">网格系统</a></li>
+                    <li><a href="global.php">活动概览</a></li>
                     <li class="divider"></li>
-                    <li><a href="responsive.php">响应式设计</a>
+                    <li><a href="layout.php">近期热门活动</a></li>
+                    <li><a href="grid.php">精彩回阅</a></li>
                     </li>
                 </ul>
             </li>
-            <li data-role="dropdown" class=""><a href="#">基本样式</a>
+            <li data-role="dropdown" class=""><a href="#">员工俱乐部</a>
                 <ul class="dropdown-menu" style="overflow: hidden; display: none;">
-                    <li><a href="typography.php">排版</a></li>
-                    <li><a href="tables.php">表格</a></li>
-                    <li><a href="forms.php">表单</a></li>
-                    <li><a href="buttons.php">按钮</a></li>
-                    <li><a href="images.php">图像</a></li>
+                    <li><a href="typography.php">俱乐部活动</a></li>
                     <li class="divider"></li>
-                    <li><a href="icons.php">图标</a></li>
+                    <li><a href="icons.php">俱乐部会员</a></li>
                 </ul>
             </li>
-            <li data-role="dropdown"><a href="#">组件</a>
+            <li data-role="dropdown"><a href="#">通知公告</a>
                 <ul class="dropdown-menu" style="overflow: hidden;">
                     <li><a href="tiles.php">Tiles</a></li>
                     <li><a href="menus.php">菜单与导航</a></li>
@@ -52,20 +47,19 @@
                     <li><a href="cards.php">奖金——扑克牌</a></li>
                 </ul>
             </li>
-            <li data-role="dropdown" class=""><a href="#">学习笔记</a>
+            <li data-role="dropdown" class=""><a href="#">问卷调查</a>
                <ul class="dropdown-menu" style="overflow: hidden; display: none;">
                  <li><a href="http://www.w3cplus.com/css/metro-ui-css-start.html" target="_blank">开始之旅</a></li>
                </ul>
             </li>
-            <li><a href="http://www.w3cplus.com/resource/tags/297.html">资源</a></li>
-            <li><a href="https://github.com/olton/Metro-UI-CSS" target="_blank">源码下载</a></li>
-            <li><a href="http://www.w3cplus.com">回到W3cplus</a></li>
+            <li><a href="http://www.w3cplus.com/resource/tags/297.html">电子刊物</a></li>
+            <li><a href="http://www.w3cplus.com">参考W3cplus</a></li>
         </ul>
 
     </div>
+</div><br><div>
 </div>
 </div>
-
 <div >
  <div class="tile-group tile-drag">
 
@@ -90,29 +84,23 @@
                 <img src="/srcImg/1_3.jpg" alt="">
             </div>
         </div>
-
-
-
-   <a href="http://cvplblip02/SGA/AddVolunteer.aspx" >  <div class="tile icon bg-color-blue outline-color-white " >
-            <b class="check"></b>
-            <div class="tile-content" >
-                 <i style="position:absolute; top:65px" class="icon-smiley"></i>
-
+   <a href="http://cvplblip02/SGA/AddVolunteer.aspx" >
+      <div class="tile icon bg-color-blue outline-color-white ">
+        <b class="check"></b>
+            <div class="tile-content">
+                <i style="position:absolute; top:65px" class="icon-smiley"></i>
             </div>
             <div class="brand">
-                <center><span class="name"><b><font size="2" face="微软雅黑" ><a href="http://cvplblip01/SGA/AddAction.aspx">加入志愿者</a></font></b></span></center>
+                <center><span class="name"><b><font size="2" face="微软雅黑">加入志愿者</font></b></span></center>
             </div>
-
         </div>
-</a>
+   </a>
 
         <a target="_blank" id="qq" href="/" onclick="console.log('clicked')" class="tile image ">
             <div class="tile-content">
                 <img src="/srcImg/2_2.jpg" alt="">
             </div>
         </a>
-
-
         <div class="tile double bg-color-green outline-color-white" data-role="tile-slider" data-param-period="5000" data-param-direction="left" >
             <div class="tile-content">
                 <h2>人力资源部</h2>
