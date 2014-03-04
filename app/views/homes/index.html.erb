@@ -14,7 +14,7 @@
             <li data-role="dropdown" class="">
                 <a href="#">公司活动</a>
                 <ul class="dropdown-menu" style="overflow: hidden; display: none;">
-                    <li><a href="global.php">活动概览</a></li>
+                    <li><a href='/company_activities'>活动概览</a></li>
                     <li class="divider"></li>
                     <li><a href="layout.php">近期热门活动</a></li>
                     <li><a href="grid.php">精彩回阅</a></li>
@@ -62,7 +62,7 @@
 </div>
 <div >
  <div class="tile-group tile-drag">
-
+    <%= link_to('/company_activities') do %>
       <div class="tile icon bg-color-orange outline-color-white">
             <div class="tile-content">
                 <i style="position:absolute; top:65px" class="icon-calendar"></i>
@@ -71,7 +71,7 @@
                 <center><span class="name"><b><font size="2" face="微软雅黑">活动概览</font></b></span></center>
             </div>
         </div>
-
+  <% end %>
 
         <div class="tile double image-slider" data-role="tile-slider" data-param-period="4000">
            <div class="tile-content">
