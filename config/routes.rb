@@ -1,4 +1,6 @@
 Icome::Application.routes.draw do
+  resources :clubs
+
   devise_for :users
   root :to => 'homes#index'
   #root :to => 'company_activities#index'
