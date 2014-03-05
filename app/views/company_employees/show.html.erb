@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+<h2><%= @employee.action_name %></h2>
+  <p>
+    <div>活动类型：<%= @activity.person %></div>
+    <div>发布时间：<%= @activity.create_time %>   更新时间：<%= @activity.update_time %></div>
+    <div>语言：<%= @activity.language_type %>   活动状态：<%= @activity.status %></div>
+  </p>
+  <p>
+   <div>活动地点：<%= @activity.email %>   是否有奖项：<%= @activity.is_award %></div>
+   <div>活动总用时间：<%= @activity.action_time_qty %></div>
+   <div>活动开始时间：<%= @activity.email %></div>
+   <div>需要志愿者人数：<%= @activity.volunteer_qty %>  限制参于人数：<%= @activity.acter_qty %></div>
+   <div>活动介绍：<%= @activity.synopsis %></div>
+   <div>备注：<%= @activity.remark %></div>
+  </p>
+  <p>
+    <div>活动联系方式：</div>
+    <div>联系人：<%= @activity.person %></div>
+    <div>电话：<%= @activity.phone %></div>
+    <div>邮箱：<%= @activity.email %></div>
+  </p>
+
+  <input type="submit" value="参加"/>
+  <input type="button" value="Button"/>
