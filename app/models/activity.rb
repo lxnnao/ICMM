@@ -1,4 +1,5 @@
-class Activity < ConnectionAdapter
+class Activity < ActiveRecord::Base
+  establish_connection("eic_dev")
   self.table_name = 'im_activity'
   self.primary_key = 'activity_id'
   belongs_to :department,:class_name => 'Department',:primary_key => 'department_id', :foreign_key => "department_id"
