@@ -1,0 +1,65 @@
+<%= form_for(@family) do |f| %>
+  <% if @family.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@family.errors.count, "error") %> prohibited this family from being saved:</h2>
+
+      <ul>
+      <% @family.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :family_id %><br>
+    <%= f.text_field :family_id %>
+  </div>
+  <div class="field">
+    <%= f.label :family_name %><br>
+    <%= f.text_field :family_name %>
+  </div>
+  <div class="field">
+    <%= f.label :family_idcard %><br>
+    <%= f.text_field :family_idcard %>
+  </div>
+  <div class="field">
+    <%= f.label :emp_id %><br>
+    <%= f.text_field :emp_id %>
+  </div>
+  <div class="field">
+    <%= f.label :is_child %><br>
+    <%= f.text_field :is_child %>
+  </div>
+  <div class="field">
+    <%= f.label :m_f %><br>
+    <%= f.text_field :m_f %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :bus_line %><br>
+    <%= f.text_field :bus_line %>
+  </div>
+  <div class="field">
+    <%= f.label :create_time %><br>
+    <%= f.datetime_select :create_time %>
+  </div>
+  <div class="field">
+    <%= f.label :update_time %><br>
+    <%= f.datetime_select :update_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,49 @@
+<h1>Listing families</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Family</th>
+      <th>Family name</th>
+      <th>Family idcard</th>
+      <th>Emp</th>
+      <th>Is child</th>
+      <th>M f</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Bus line</th>
+      <th>Create time</th>
+      <th>Update time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @families.each do |family| %>
+      <tr>
+        <td><%= family.family_id %></td>
+        <td><%= family.family_name %></td>
+        <td><%= family.family_idcard %></td>
+        <td><%= family.emp_id %></td>
+        <td><%= family.is_child %></td>
+        <td><%= family.m_f %></td>
+        <td><%= family.name %></td>
+        <td><%= family.phone %></td>
+        <td><%= family.email %></td>
+        <td><%= family.bus_line %></td>
+        <td><%= family.create_time %></td>
+        <td><%= family.update_time %></td>
+        <td><%= link_to 'Show', family %></td>
+        <td><%= link_to 'Edit', edit_family_path(family) %></td>
+        <td><%= link_to 'Destroy', family, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Family', new_family_path %>

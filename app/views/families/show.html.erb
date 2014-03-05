@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Family:</strong>
+  <%= @family.family_id %>
+</p>
+
+<p>
+  <strong>Family name:</strong>
+  <%= @family.family_name %>
+</p>
+
+<p>
+  <strong>Family idcard:</strong>
+  <%= @family.family_idcard %>
+</p>
+
+<p>
+  <strong>Emp:</strong>
+  <%= @family.emp_id %>
+</p>
+
+<p>
+  <strong>Is child:</strong>
+  <%= @family.is_child %>
+</p>
+
+<p>
+  <strong>M f:</strong>
+  <%= @family.m_f %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @family.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @family.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @family.email %>
+</p>
+
+<p>
+  <strong>Bus line:</strong>
+  <%= @family.bus_line %>
+</p>
+
+<p>
+  <strong>Create time:</strong>
+  <%= @family.create_time %>
+</p>
+
+<p>
+  <strong>Update time:</strong>
+  <%= @family.update_time %>
+</p>
+
+<%= link_to 'Edit', edit_family_path(@family) %> |
+<%= link_to 'Back', families_path %>
