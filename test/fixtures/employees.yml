@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  emp_id: MyString
+  emp_name: MyString
+  emp_phone: MyString
+  emp_email: MyString
+  emp_familyname: MyString
+  is_volunteer: false
+  emp_idcard: MyString
+  create_time: 2014-03-05 15:54:11
+  update_time: 2014-03-05 15:54:11
+
+two:
+  emp_id: MyString
+  emp_name: MyString
+  emp_phone: MyString
+  emp_email: MyString
+  emp_familyname: MyString
+  is_volunteer: false
+  emp_idcard: MyString
+  create_time: 2014-03-05 15:54:11
+  update_time: 2014-03-05 15:54:11

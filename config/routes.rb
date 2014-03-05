@@ -1,4 +1,6 @@
 Icome::Application.routes.draw do
+  resources :employees
+
   resources :activities
 
   resources :clubs
