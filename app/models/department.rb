@@ -1,2 +1,2 @@
-class Department < ActiveRecord::Base
+class Department < ConnectionAdapter
 end

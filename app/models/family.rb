@@ -1,2 +1,2 @@
-class Family < ActiveRecord::Base
+class Family < ConnectionAdapter
 end

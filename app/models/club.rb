@@ -1,2 +1,2 @@
-class Club < ActiveRecord::Base
+class Club < ConnectionAdapter
 end
