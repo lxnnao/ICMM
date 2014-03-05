@@ -1,4 +1,6 @@
 Icome::Application.routes.draw do
+  resources :activities
+
   resources :clubs
 
   devise_for :users

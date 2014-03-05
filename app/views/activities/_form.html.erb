@@ -1,0 +1,109 @@
+<%= form_for(@activity) do |f| %>
+  <% if @activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+
+      <ul>
+      <% @activity.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :activity_id %><br>
+    <%= f.text_field :activity_id %>
+  </div>
+  <div class="field">
+    <%= f.label :activity_name %><br>
+    <%= f.text_field :activity_name %>
+  </div>
+  <div class="field">
+    <%= f.label :activity_type %><br>
+    <%= f.text_field :activity_type %>
+  </div>
+  <div class="field">
+    <%= f.label :startdate %><br>
+    <%= f.datetime_select :startdate %>
+  </div>
+  <div class="field">
+    <%= f.label :starttime %><br>
+    <%= f.datetime_select :starttime %>
+  </div>
+  <div class="field">
+    <%= f.label :endtime %><br>
+    <%= f.datetime_select :endtime %>
+  </div>
+  <div class="field">
+    <%= f.label :venues %><br>
+    <%= f.text_field :venues %>
+  </div>
+  <div class="field">
+    <%= f.label :durringtime %><br>
+    <%= f.text_field :durringtime %>
+  </div>
+  <div class="field">
+    <%= f.label :presenter %><br>
+    <%= f.text_field :presenter %>
+  </div>
+  <div class="field">
+    <%= f.label :descriptions %><br>
+    <%= f.text_area :descriptions %>
+  </div>
+  <div class="field">
+    <%= f.label :volunteers %><br>
+    <%= f.number_field :volunteers %>
+  </div>
+  <div class="field">
+    <%= f.label :attendees %><br>
+    <%= f.number_field :attendees %>
+  </div>
+  <div class="field">
+    <%= f.label :has_award %><br>
+    <%= f.check_box :has_award %>
+  </div>
+  <div class="field">
+    <%= f.label :department_id %><br>
+    <%= f.text_field :department_id %>
+  </div>
+  <div class="field">
+    <%= f.label :language_type %><br>
+    <%= f.text_field :language_type %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :activity_name_eng %><br>
+    <%= f.text_field :activity_name_eng %>
+  </div>
+  <div class="field">
+    <%= f.label :venues_eng %><br>
+    <%= f.text_field :venues_eng %>
+  </div>
+  <div class="field">
+    <%= f.label :remark %><br>
+    <%= f.text_field :remark %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_id %><br>
+    <%= f.text_field :contact_id %>
+  </div>
+  <div class="field">
+    <%= f.label :operator %><br>
+    <%= f.text_field :operator %>
+  </div>
+  <div class="field">
+    <%= f.label :create_time %><br>
+    <%= f.datetime_select :create_time %>
+  </div>
+  <div class="field">
+    <%= f.label :update_time %><br>
+    <%= f.datetime_select :update_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

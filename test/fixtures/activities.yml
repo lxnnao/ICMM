@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  activity_id: MyString
+  activity_name: MyString
+  activity_type: MyString
+  startdate: 2014-03-05 15:26:36
+  starttime: 2014-03-05 15:26:36
+  endtime: 2014-03-05 15:26:36
+  venues: MyString
+  durringtime: MyString
+  presenter: MyString
+  descriptions: MyText
+  volunteers: 1
+  attendees: 1
+  has_award: false
+  department_id: MyString
+  language_type: MyString
+  status: MyString
+  activity_name_eng: MyString
+  venues_eng: MyString
+  remark: MyString
+  contact_id: MyString
+  operator: MyString
+  create_time: 2014-03-05 15:26:36
+  update_time: 2014-03-05 15:26:36
+
+two:
+  activity_id: MyString
+  activity_name: MyString
+  activity_type: MyString
+  startdate: 2014-03-05 15:26:36
+  starttime: 2014-03-05 15:26:36
+  endtime: 2014-03-05 15:26:36
+  venues: MyString
+  durringtime: MyString
+  presenter: MyString
+  descriptions: MyText
+  volunteers: 1
+  attendees: 1
+  has_award: false
+  department_id: MyString
+  language_type: MyString
+  status: MyString
+  activity_name_eng: MyString
+  venues_eng: MyString
+  remark: MyString
+  contact_id: MyString
+  operator: MyString
+  create_time: 2014-03-05 15:26:36
+  update_time: 2014-03-05 15:26:36
