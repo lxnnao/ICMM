@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Award:</strong>
+  <%= @award.award_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @award.name %>
+</p>
+
+<p>
+  <strong>Activity:</strong>
+  <%= @award.activity_id %>
+</p>
+
+<p>
+  <strong>Qty:</strong>
+  <%= @award.qty %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @award.status %>
+</p>
+
+<p>
+  <strong>Descriptions:</strong>
+  <%= @award.descriptions %>
+</p>
+
+<p>
+  <strong>Create time:</strong>
+  <%= @award.create_time %>
+</p>
+
+<p>
+  <strong>Update time:</strong>
+  <%= @award.update_time %>
+</p>
+
+<%= link_to 'Edit', edit_award_path(@award) %> |
+<%= link_to 'Back', awards_path %>

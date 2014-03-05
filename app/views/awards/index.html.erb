@@ -1,0 +1,41 @@
+<h1>Listing awards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Award</th>
+      <th>Name</th>
+      <th>Activity</th>
+      <th>Qty</th>
+      <th>Status</th>
+      <th>Descriptions</th>
+      <th>Create time</th>
+      <th>Update time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @awards.each do |award| %>
+      <tr>
+        <td><%= award.award_id %></td>
+        <td><%= award.name %></td>
+        <td><%= award.activity_id %></td>
+        <td><%= award.qty %></td>
+        <td><%= award.status %></td>
+        <td><%= award.descriptions %></td>
+        <td><%= award.create_time %></td>
+        <td><%= award.update_time %></td>
+        <td><%= link_to 'Show', award %></td>
+        <td><%= link_to 'Edit', edit_award_path(award) %></td>
+        <td><%= link_to 'Destroy', award, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Award', new_award_path %>
