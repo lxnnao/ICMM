@@ -11,27 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140305094908) do
+ActiveRecord::Schema.define(version: 20140306043352) do
 
 # Could not dump table "activities" because of following NoMethodError
-#   undefined method `column_spec_with_oracle_enhanced' for #<ActiveRecord::ConnectionAdapters::SQLite3Adapter:0x527fc58>
+#   undefined method `column_spec_with_oracle_enhanced' for #<ActiveRecord::ConnectionAdapters::SQLite3Adapter:0x5156fe8>
 
 # Could not dump table "awards" because of following NoMethodError
-#   undefined method `column_spec_with_oracle_enhanced' for #<ActiveRecord::ConnectionAdapters::SQLite3Adapter:0x527fc58>
+#   undefined method `column_spec_with_oracle_enhanced' for #<ActiveRecord::ConnectionAdapters::SQLite3Adapter:0x5156fe8>
 
 # Could not dump table "clubs" because of following NoMethodError
-#   undefined method `column_spec_with_oracle_enhanced' for #<ActiveRecord::ConnectionAdapters::SQLite3Adapter:0x527fc58>
+#   undefined method `column_spec_with_oracle_enhanced' for #<ActiveRecord::ConnectionAdapters::SQLite3Adapter:0x5156fe8>
 
 # Could not dump table "departments" because of following NoMethodError
-#   undefined method `column_spec_with_oracle_enhanced' for #<ActiveRecord::ConnectionAdapters::SQLite3Adapter:0x527fc58>
+#   undefined method `column_spec_with_oracle_enhanced' for #<ActiveRecord::ConnectionAdapters::SQLite3Adapter:0x5156fe8>
 
 # Could not dump table "employees" because of following NoMethodError
-#   undefined method `column_spec_with_oracle_enhanced' for #<ActiveRecord::ConnectionAdapters::SQLite3Adapter:0x527fc58>
+#   undefined method `column_spec_with_oracle_enhanced' for #<ActiveRecord::ConnectionAdapters::SQLite3Adapter:0x5156fe8>
 
 # Could not dump table "families" because of following NoMethodError
-#   undefined method `column_spec_with_oracle_enhanced' for #<ActiveRecord::ConnectionAdapters::SQLite3Adapter:0x527fc58>
+#   undefined method `column_spec_with_oracle_enhanced' for #<ActiveRecord::ConnectionAdapters::SQLite3Adapter:0x5156fe8>
 
 # Could not dump table "users" because of following NoMethodError
-#   undefined method `column_spec_with_oracle_enhanced' for #<ActiveRecord::ConnectionAdapters::SQLite3Adapter:0x527fc58>
+#   undefined method `column_spec_with_oracle_enhanced' for #<ActiveRecord::ConnectionAdapters::SQLite3Adapter:0x5156fe8>
 
 end
