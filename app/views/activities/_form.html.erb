@@ -10,11 +10,6 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :activity_id %><br>
-    <%= f.text_field :activity_id %>
-  </div>
   <div class="field">
     <%= f.label :activity_name %><br>
     <%= f.text_field :activity_name %>
@@ -87,21 +82,30 @@
     <%= f.label :remark %><br>
     <%= f.text_field :remark %>
   </div>
-  <div class="field">
-    <%= f.label :contact_id %><br>
-    <%= f.text_field :contact_id %>
+  <%= f.fields_for :contactor do |contactor_form| %>
+   <div >
+    <%= contactor_form.label :emp_badge %><br>
+    <%= contactor_form.text_field :emp_badge %>
+  </div>
+    <div class="field">
+    <%= contactor_form.label :emp_name %><br>
+    <%= contactor_form.text_field :emp_name %>
   </div>
   <div class="field">
-    <%= f.label :operator %><br>
-    <%= f.text_field :operator %>
+    <%= contactor_form.label :emp_phone %><br>
+    <%= contactor_form.text_field :emp_phone %>
   </div>
   <div class="field">
-    <%= f.label :create_time %><br>
-    <%= f.datetime_select :create_time %>
+    <%= contactor_form.label :emp_mobile %><br>
+    <%= contactor_form.text_field :emp_mobile %>
   </div>
   <div class="field">
-    <%= f.label :update_time %><br>
-    <%= f.datetime_select :update_time %>
+    <%= contactor_form.label :emp_email %><br>
+    <%= contactor_form.text_field :emp_email %>
+  </div>
+  <% end %>
+  <div class="field">
+    <%= f.hidden_field :operator, :value => current_user.badge %>
   </div>
   <div class="actions">
     <%= f.submit %>

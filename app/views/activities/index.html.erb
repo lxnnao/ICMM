@@ -3,7 +3,6 @@
 <table>
   <thead>
     <tr>
-      <th>Activity</th>
       <th>Activity name</th>
       <th>Activity type</th>
       <th>Startdate</th>
@@ -23,6 +22,7 @@
       <th>Venues eng</th>
       <th>Remark</th>
       <th>Contact</th>
+      <th>Contactname</th>
       <th>Operator</th>
       <th>Create time</th>
       <th>Update time</th>
@@ -35,7 +35,6 @@
   <tbody>
     <% @activities.each do |activity| %>
       <tr>
-        <td><%= activity.activity_id %></td>
         <td><%= activity.activity_name %></td>
         <td><%= activity.activity_type %></td>
         <td><%= activity.startdate %></td>
@@ -55,6 +54,7 @@
         <td><%= activity.venues_eng %></td>
         <td><%= activity.remark %></td>
         <td><%= activity.contact_id %></td>
+        <td><%= activity.contactor.try :emp_name %></td>
         <td><%= activity.operator %></td>
         <td><%= activity.create_time %></td>
         <td><%= activity.update_time %></td>

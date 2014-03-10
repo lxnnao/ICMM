@@ -10,10 +10,9 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
-    <%= f.label :emp_id %><br>
-    <%= f.text_field :emp_id %>
+    <%= f.label :emp_badge %><br>
+    <%= f.text_field :emp_badge %>
   </div>
   <div class="field">
     <%= f.label :emp_name %><br>
@@ -22,6 +21,10 @@
   <div class="field">
     <%= f.label :emp_phone %><br>
     <%= f.text_field :emp_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :emp_mobile %><br>
+    <%= f.text_field :emp_mobile %>
   </div>
   <div class="field">
     <%= f.label :emp_email %><br>
@@ -39,14 +42,7 @@
     <%= f.label :emp_idcard %><br>
     <%= f.text_field :emp_idcard %>
   </div>
-  <div class="field">
-    <%= f.label :create_time %><br>
-    <%= f.datetime_select :create_time %>
-  </div>
-  <div class="field">
-    <%= f.label :update_time %><br>
-    <%= f.datetime_select :update_time %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
