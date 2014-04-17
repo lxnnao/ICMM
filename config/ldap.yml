@@ -23,7 +23,7 @@ authorizations: &AUTHORIZATIONS
   attribute: employeeid
   base: "DC=sdcorp,DC=global,DC=sandisk,DC=com"
   admin_user: "MES Service"
-  admin_password: ""
+  admin_password: "@Um48asdofg"
   ssl: false
 ## Environment
 
