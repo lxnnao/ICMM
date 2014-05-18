@@ -1,0 +1,7 @@
+zh-CN:
+  activerecord:
+    models:
+      activity:"活动"
+    attributes:
+      activity:
+        activity_name: "活动名称"
