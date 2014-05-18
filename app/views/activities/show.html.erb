@@ -1,8 +1,14 @@
-<p id="notice"><%= notice %></p>
+    <div class="page">
+        <div class="page-header">
+            <div class="page-header-content">
+          <p><%= link_to 'Edit', edit_activity_path(@activity) %> |
+<%= link_to 'Back', activities_path %></p>
+          <p><font size="6" face="微软雅黑">活动详情：</font></b></p>
+        </div>
+        <div class="page-region">
+            <div class="page-region-content">
 
-<p>
-  <strong>Activity:</strong>
-</p>
+<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Activity name:</strong>
@@ -114,5 +120,12 @@
   <%= @activity.update_time %>
 </p>
 
-<%= link_to 'Edit', edit_activity_path(@activity) %> |
-<%= link_to 'Back', activities_path %>
+            </div>
+        </div>
+    </div>
+
+   <div class="page fill">
+       <%= button_to 'join',join_activity_path(@activity) %>
+<%= button_to 'join as volunteer',volunteer_activity_path(@activity) %>
+    </div>
+

@@ -1,71 +1,30 @@
-<h1>Listing activities</h1>
+<div class="page-region-content tiles"> 
 
-<table>
-  <thead>
-    <tr>
-      <th>Activity name</th>
-      <th>Activity type</th>
-      <th>Startdate</th>
-      <th>Starttime</th>
-      <th>Endtime</th>
-      <th>Venues</th>
-      <th>Durringtime</th>
-      <th>Presenter</th>
-      <th>Descriptions</th>
-      <th>Volunteers</th>
-      <th>Attendees</th>
-      <th>Has award</th>
-      <th>Department</th>
-      <th>Language type</th>
-      <th>Status</th>
-      <th>Activity name eng</th>
-      <th>Venues eng</th>
-      <th>Remark</th>
-      <th>Contact</th>
-      <th>Contactname</th>
-      <th>Operator</th>
-      <th>Create time</th>
-      <th>Update time</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="tile-group tile-drag" style="width: 960px; position: relative;">
+	<p ><div style="right: 80px; position: relative;">活动列表:</div></p>
+	<% @activities.each do |activities| %>
+	<% if activities.status=='1' then %>
+	<div class="tile bg-color-green double outline-color-red">
+	<% else %>
+	<div class="tile bg-color-red double outline-color-green">
+	<% end %>
+	        <div class="tile-content">
+	              <%= link_to(activities) do %>
+	  <p>
+	   <div><%= activities.activity_name %></div>
+	   <div>[<%= (activities.startdate||Time.now).strftime("%Y-%m-%d")  %>]</div>
+	    <div>地点：<%= activities.venues %></div>
+	    <div>状态：<%= activities.status %></div>
+	  </p>
+	  <% end %>
+	        </div>
+	    </div>
+	<% end %>
+	</div>
+</div>	
 
-  <tbody>
-    <% @activities.each do |activity| %>
-      <tr>
-        <td><%= activity.activity_name %></td>
-        <td><%= activity.activity_type %></td>
-        <td><%= activity.startdate %></td>
-        <td><%= activity.starttime %></td>
-        <td><%= activity.endtime %></td>
-        <td><%= activity.venues %></td>
-        <td><%= activity.durringtime %></td>
-        <td><%= activity.presenter %></td>
-        <td><%= activity.descriptions %></td>
-        <td><%= activity.volunteers %></td>
-        <td><%= activity.attendees %></td>
-        <td><%= activity.has_award %></td>
-        <td><%= activity.department_id %></td>
-        <td><%= activity.language_type %></td>
-        <td><%= activity.status %></td>
-        <td><%= activity.activity_name_eng %></td>
-        <td><%= activity.venues_eng %></td>
-        <td><%= activity.remark %></td>
-        <td><%= activity.contact_id %></td>
-        <td><%= activity.contactor.try :emp_name %></td>
-        <td><%= activity.operator %></td>
-        <td><%= activity.create_time %></td>
-        <td><%= activity.update_time %></td>
-        <td><%= link_to 'Show', activity %></td>
-        <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
-        <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="tile-group tile-drag" style="width: 30px; position: relative;">
+	<div class="tile bg-color-green double outline-color-red">状态：</div>
+</div>
 
-<br>
-
-<%= link_to 'New Activity', new_activity_path %>
+</div>
