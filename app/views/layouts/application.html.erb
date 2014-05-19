@@ -38,40 +38,123 @@
   </head>
 
   <body class="metrouicss">
-    <div class="page secondary fixed-header">
+    <div class="page secondary fg-color-white">
       <div class="page-header">
-          <div class="page-header-content">
+        <div class="page-header-content" style="height: 135px;">
 
-            <img style="position:absolute; left:70px" src="/srcImg/icomm.png" alt="" /></img>
-
-              <div class="user-login" style="position:absolute; left:400px">
-                  <a href="#">
-                      <div class="name" >
-                          <span class="first-name fg-color-red">SanDisk</span>
-                      </div>
-                      <div class="avatar">
-                          <i class="icon-user fg-color-white"></i>
-                      </div>
-                  </a>
-                  <ul class="nav navbar-nav navbar-right">
-                  <% if user_signed_in? -%>
-                     <li class="dropdown">
-                         <%= link_to edit_user_registration_path, class: 'dropdown-toggle',data: { toggle:  "dropdown" } do -%>
-                         <%= current_user.badge %><b class="caret"></b>
-                         <% end -%>
-                         <ul class="dropdown-menu">
-                           <li><%= link_to 'Profile',    edit_user_registration_path %></li>
-                           <li class="divider"></li>
-                           <li><%= link_to 'Logout',destroy_user_session_path, :method => :delete %></li>
-                         </ul>
-                     </li>
-                  <% else -%>
-                      <li><%= link_to 'Sign In', new_user_session_path, class:     :active %></li>
-                      <li><%= link_to 'Register', new_user_registration_path,class: :active %></li>
-                  <% end -%>
-                  </ul>
-              </div>
+          <a href="/"><img style="position:absolute; left:90px" src="/srcImg/icomm.png" alt="" /></img></a>
+          <div class="name" style="position:absolute; left:870px;bottom:40px;font-size: 300% ">
+              <span class="fg-color-red">
+                <%= link_to "中文版", :controller => controller.controller_name,
+           :action => controller.action_name, :locale => "zh"  %>
+           <%= link_to "English", :controller => controller.controller_name,
+           :action => controller.action_name, :locale => "en" %>
+              </span>
           </div>
+          <div class="user-login" style="position:absolute; right:60px">
+            <a href="#">
+                <div class="name">
+                    <span class="first-name fg-color-red">SanDisk</span>
+
+                </div>
+                <div class="avatar">
+                    <i class="icon-user fg-color-white"></i>
+                </div>
+            </a>
+
+            <ul class="nav navbar-nav navbar-right">
+              <% if user_signed_in? -%>
+                <li data-role="dropdown" style="position:relative; left:20px;list-style-type: none;">
+                  <a href="#"><%= current_user.badge %><b class="caret"></b></a>
+                    <ul class="dropdown-menu" style="overflow: hidden; display: none;">
+                        <li><%= link_to 'Profile',edit_user_registration_path %>
+                        </li>
+                        <li class="divider">
+                        </li>
+                        <li><%= link_to 'Logout',destroy_user_session_path, :method => :delete %>
+                        </li>
+                    </ul>
+                </li>
+              <% else -%>
+                     <a href="#"><b class="caret"></b>
+                    <div style="position:relative;left:20px;"><%= link_to 'Sign In', new_user_session_path, class: :active %>
+                    </div>
+                    </a>
+              <% end -%>
+            </ul>
+
+
+
+
+
+          </div>
+
+
+
+
+        </div>
+
+
+<div class="nav-bar">
+    <div class="nav-bar-inner padding10 fg-color-red">
+        <span class="pull-menu"></span>
+        <a href="#"><span class="element brand fg-color-red ">
+            <strong>SanDisk SDSS <%= I18n.t :hello %></strong>   <small><!--?= include("version.phtml")?--></small>
+        </span></a>
+
+        <div class="divider"></div>
+
+        <ul class="menu" style="overflow: visible;">
+            <li><a href="#">首页</a></li>
+            <li data-role="dropdown" class="">
+                <a href="#">公司活动</a>
+                <ul class="dropdown-menu" style="overflow: hidden; display: none;">
+                    <li><a href='/company_activities'>活动概览</a></li>
+                    <li class="divider"></li>
+                    <li><a href="layout.php">近期热门活动</a></li>
+                    <li><a href="grid.php">精彩回阅</a></li>
+                    </li>
+                </ul>
+            </li>
+            <li data-role="dropdown" class=""><a href="#">员工俱乐部</a>
+                <ul class="dropdown-menu" style="overflow: hidden; display: none;">
+                    <li><a href="typography.php">俱乐部活动</a></li>
+                    <li class="divider"></li>
+                    <li><a href="icons.php">俱乐部会员</a></li>
+                </ul>
+            </li>
+            <li data-role="dropdown"><a href="#">通知公告</a>
+                <ul class="dropdown-menu" style="overflow: hidden;">
+                    <li><a href="tiles.php">Tiles</a></li>
+                    <li><a href="menus.php">菜单与导航</a></li>
+                    <li><a href="sidebar.php">侧边栏</a></li>
+                    <li><a href="pagecontrol.php">多页控件</a></li>
+                    <li><a href="accordion.php">手风琴</a></li>
+                    <li><a href="buttons-set.php">按钮设置</a></li>
+                    <li><a href="rating.php">评分系统</a></li>
+                    <li><a href="progress.php">进度条</a></li>
+                    <li><a href="carousel.php">幻灯片</a></li>
+                    <li><a href="listview.php">列表视图</a></li>
+                    <li><a href="slider.php">滑块</a></li>
+                    <li class="divider"></li>
+                    <li><a href="notices.php">通知</a></li>
+                    <li class="divider"></li>
+                    <li><a href="cards.php">奖金——扑克牌</a></li>
+                </ul>
+            </li>
+            <li data-role="dropdown" class=""><a href="#">问卷调查</a>
+               <ul class="dropdown-menu" style="overflow: hidden; display: none;">
+                 <li><a href="http://www.w3cplus.com/css/metro-ui-css-start.html" target="_blank">开始之旅</a></li>
+               </ul>
+            </li>
+            <li><a href="http://www.w3cplus.com/resource/tags/297.html">电子刊物</a></li>
+            <li><a href="http://www.w3cplus.com">参考W3cplus</a></li>
+        </ul>
+</div>
+</div>
+
+
+
       </div>
 
       <div class="page-region">
