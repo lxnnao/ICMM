@@ -13,14 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require metro-ui/tile-slider
-//= require metro-ui/start-menu
-//= require metro-ui/tile-drag
-//= require metro-ui/dropdown
-//= require metro-ui/accordion
-//= require metro-ui/buttonset
-//= require metro-ui/carousel
-//= require metro-ui/pagecontrol
-//= require metro-ui/rating
-//= require metro-ui/slider
 //= require_tree .
