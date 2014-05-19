@@ -1,15 +1,16 @@
 <p id="notice"><%= notice %></p>
 <p >
 <div class="body-text">
-<h2>活动列表</h2>
+<h2><span class="name" ><font size="8" face="微软雅黑">活动列表</font></span></h2>
 <% @activitys.each do |activity| %>
     <div class="tile bg-color-red double">
         <div class="tile-content">
               <%= link_to(activity) do %>
   <p>
-   <div>[<%= activity.action_date %>]:<%= activity.action_name %></div>
-   <div>English desc:<%= activity.action_eng_name %></div>
-    <div>地点：<%= activity.action_place %>  状态：<%= activity.status %></div>
+   <div><%= activity.action_name %></div>
+   <div>[<%= (activity.action_date||Time.now).strftime("%Y-%m-%d")  %>]</div>
+    <div>地点：<%= activity.action_place %></div>
+    <div>状态：<%= activity.status %></div>
   </p>
   <% end %>
         </div>

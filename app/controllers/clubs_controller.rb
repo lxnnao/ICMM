@@ -1,5 +1,5 @@
 class ClubsController < ApplicationController
-  before_action :set_club, only: [:show, :edit, :update, :destroy]
+  before_action :set_club, only: [:show, :edit, :update, :destroy,:register]
 
   # GET /clubs
   def index
@@ -19,6 +19,20 @@ class ClubsController < ApplicationController
   def edit
   end
 
+  def register
+
+    @register=Register.new
+    @register.emp_id=Employee.where(emp_badge: current_user.badge).first.emp_id
+    @register.club_id=@club.club_id
+    @register.update_time=Time.now
+    @register.operater=current_user.badge
+    if @register.save
+      redirect_to @club, notice: 'You join the club successfully.'
+    else
+      render text: 'something is wrong'
+    end
+
+  end
   # POST /clubs
   def create
     @club = Club.new(club_params)

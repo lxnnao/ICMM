@@ -3,7 +3,12 @@
 <div class="body-text">
 <h2>活动列表</h2>
 <% @employees.each do |activity| %>
-    <div class="tile bg-color-red double">
+  <% if activity.status =='0' then %>
+      <div class="tile bg-color-blue triple-vertical outline-color-white">
+  <% else %>
+     <div class="tile bg-color-blue triple-vertical outline-color-white">
+  <% end %>
+
         <div class="tile-content">
               <%= link_to(activity) do %>
   <p>

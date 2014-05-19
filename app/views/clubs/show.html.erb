@@ -39,5 +39,7 @@
   <%= @club.update_time %>
 </p>
 
+<%= button_to 'register',register_club_path(@club) %>
+
 <%= link_to 'Edit', edit_club_path(@club) %> |
 <%= link_to 'Back', clubs_path %>
