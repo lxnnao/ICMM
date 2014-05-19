@@ -7,9 +7,16 @@ Icome::Application.routes.draw do
 
   resources :employees
 
-  resources :activities
+  resources :activities do
+    member do
+      post 'join'
+      post 'volunteer'
+    end
+  end
 
-  resources :clubs
+  resources :clubs do
+    post 'register' , :on=>:member
+  end
 
   devise_for :users
   root :to => 'homes#index'
