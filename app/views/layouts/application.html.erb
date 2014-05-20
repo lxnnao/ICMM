@@ -37,16 +37,16 @@
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
   </head>
 
-  <body class="metrouicss">
+  <body class="metrouicss" style="width: 1500px;">
     <div class="page secondary fg-color-white">
       <div class="page-header">
         <div class="page-header-content" style="height: 135px;">
 
           <a href="/"><img style="position:absolute; left:90px" src="/srcImg/icomm.png" alt="" /></img></a>
-          <div class="name" style="position:absolute; left:870px;bottom:40px;font-size: 300% ">
+          <div class="name" style="position:absolute; right:270px;bottom:40px;font-size: 300% ">
               <span class="fg-color-red">
                 <%= link_to "中文版", :controller => controller.controller_name,
-           :action => controller.action_name, :locale => "zh"  %>
+           :action => controller.action_name, :locale => "zh-CN"  %>
            <%= link_to "English", :controller => controller.controller_name,
            :action => controller.action_name, :locale => "en" %>
               </span>

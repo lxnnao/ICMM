@@ -1,6 +1,6 @@
-<div class="page-region-content tiles"> 
+<div class="page-region-content tiles">
 
-<div class="tile-group tile-drag" style="width: 960px; position: relative;">
+<div class="tile-group tile-drag" style="width: 990px; position: relative;">
 	<p ><div style="right: 80px; position: relative;">活动列表:</div></p>
 	<% @activities.each do |activities| %>
 	<% if activities.status=='1' then %>
@@ -21,10 +21,10 @@
 	    </div>
 	<% end %>
 	</div>
-</div>	
+</div>
 
-<div class="tile-group tile-drag" style="width: 30px; position: relative;">
-	<div class="tile bg-color-green double outline-color-red">状态：</div>
+<div class="tile-group tile-drag" style="width: 30px;right:260px; position:absolute;">
+	<div class="tile bg-color-green double outline-color-red"><%= link_to 'New Activity', new_activity_path %></div>
 </div>
 
 </div>
