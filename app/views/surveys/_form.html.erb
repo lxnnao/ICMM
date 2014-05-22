@@ -17,9 +17,10 @@
   </div>
 
   <%= f.fields_for :survey_questions do |builder| %>
-    <%= render "question_fields", :f => builder %>
+    <%= render "survey_question_fields", :f => builder %>
   <% end %>
 
+  <%= link_to_add_fields "Add Question", f, :survey_questions %>
 
 
   <div class="actions">
