@@ -1,6 +1,11 @@
 <fieldset>
-  <%= f.label :answer_content, "Answer" %>
-  <%= f.text_field :answer_content %>
+  <%= f.label :answer_content, "Answer" %><br />
+  <%= f.label :content_type, "Answer type: " %>
+  <%= f.collection_select :content_type, Answer::CONTENT_TYPE, :to_s, :to_s
+  %><br />
+  <%= f.label :answer_content, "Answer content"%><br />
+  <%= f.text_field :answer_content %><br />
+  <%= f.label :answer_content, "Answer list fomat: item1||item2"%><br />
   <%= f.hidden_field :_destroy %>
   <%= link_to "remove", '#', class: "remove_fields" %>
 </fieldset>

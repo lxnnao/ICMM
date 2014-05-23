@@ -10,11 +10,22 @@
   	<%= h question.question_content %>
     <ul>
     <% for answer in question.question_answers %>
-      <li><%=h answer.answer_content %></li>
+      <% if answer.content_type=="List" then %>
+          <% answer_list=answer.answer_content.split('||') %>
+          <select>
+              <option value="" disabled="disabled" selected="selected">Please select a name</option>
+              <% answer_list.each_with_index do |answer,index | %>
+              <option value=<%=index %>><%=answer %></option>
+              <% end %>
+          </select>
+      <% else %>
+        <li><%=h answer.answer_content %></li>
+      <% end %>
     <% end %>
     </ul>
   </li>
   <% end %>
 </ol>
 <%= link_to 'Edit', edit_survey_path(@survey) %> |
+<%= link_to 'Destroy', @survey, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', surveys_path %>
