@@ -13,7 +13,13 @@
   <div class="field">
 
     <%= f.label :survey_name %><br>
-    <%= f.text_field :survey_name %>
+    <%= f.text_field :survey_name %><br>
+    <%= f.label :survey_desciption %><br>
+    <%= f.text_area :survey_desciption %><br>
+    <%= f.label :publisher %><br>
+    <%= f.text_field :publisher %><br>
+    <%= f.label :pubdatedate %><br>
+    <%= f.datetime_select :pubdate %>
   </div>
 
   <%= f.fields_for :survey_questions do |builder| %>
