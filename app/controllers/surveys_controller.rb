@@ -1,5 +1,5 @@
 class SurveysController < ApplicationController
-  before_action :set_survey, only: [:show, :edit, :update, :destroy]
+  before_action :set_survey, only: [:show, :edit, :update, :destroy,:display]
 
   # GET /surveys
   def index
@@ -24,8 +24,18 @@ class SurveysController < ApplicationController
 
     @survey = Survey.new(survey_params)
     if @survey.save
-        @survey.survey_questions.each do |question|
-        question.save
+        @survey.survey_questions.each_with_index do |question,index|
+          if question.display_squence.to_s=="" then
+            question.display_squence=index
+            question.save
+          end
+          question.question_answers.each_with_index do |answer,index|
+            if answer.display_squence.to_s=="" then
+              answer.display_squence=index
+              answer.save
+            end
+          end
+
       end
       redirect_to @survey, notice: 'Survey was successfully created.'
     else
@@ -47,7 +57,9 @@ class SurveysController < ApplicationController
     @survey.destroy
     redirect_to surveys_url, notice: 'Survey was successfully destroyed.'
   end
-
+  def display
+    render 'survey_show', format: :html
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_survey
