@@ -1,4 +1,10 @@
 Icome::Application.routes.draw do
+  resources :surveys do
+    member do
+      post 'display'
+      get 'display'
+    end
+  end
   resources :departments
 
   resources :awards

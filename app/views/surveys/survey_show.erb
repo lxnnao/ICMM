@@ -1,0 +1,27 @@
+
+
+<div class="nav-bar">
+<div class="nav-bar-inner center" style="text-align: center;">
+  <p class="span9">
+  <strong><%= @survey.survey_name %></strong>
+  </p>
+ <div class="element brand fg-color-red span3">publisher: <%= @survey.publisher %>   </div>
+ <span class="element brand fg-color-red span3">pubdate: <%=(@survey.pubdate||Time.now).strftime("%Y-%m-%d")  %> </span>
+ <span class="element brand fg-color-red span3">current reports: <%= @survey.total_reports %></span>
+</div>
+</div>
+<p>
+   <div class="element brand fg-color-red"><%= @survey.survey_desciption %> </div>
+</p>
+<p>
+   <div class="element brand fg-color-red"> total question: <%= @survey.survey_questions.size %> </div>
+</p>
+<ol>
+  <% for question in @survey.survey_questions %>
+  <li>
+  	<%= h question.question_content %>
+  </li>
+  <% end %>
+</ol>
+
+<%= link_to 'Begin', edit_survey_path(@survey) %>
