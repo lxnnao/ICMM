@@ -44,11 +44,11 @@ ActiveRecord::Schema.define(version: 20140523112029) do
   create_table "answers", force: true do |t|
     t.integer  "question_id"
     t.string   "answer_content"
-    t.string   "content_type"
-    t.integer  "display_squence"
-    t.string   "remark"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "display_squence"
+    t.string   "remark"
+    t.string   "content_type"
   end
 
   create_table "awards", force: true do |t|
