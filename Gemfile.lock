@@ -131,10 +131,8 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (2.2.2)
-      coffee-rails
     tzinfo (0.3.39)
-    uglifier (2.5.0)
+    uglifier (2.5.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     warden (1.2.3)
@@ -159,5 +157,4 @@ DEPENDENCIES
   sdoc
   sqlite3
   therubyracer
-  turbolinks
   uglifier (~> 2.1)

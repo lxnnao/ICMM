@@ -31,7 +31,7 @@ gem 'uglifier', '~> 2.1', require: false
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 
 
 # To use ActiveModel has_secure_password
