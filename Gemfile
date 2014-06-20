@@ -33,6 +33,9 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
 
+# Pagination library for Rails 3, Sinatra, Merb, DataMapper, and more
+#http://github.com/mislav/will_paginate/wikis
+gem 'will_paginate', '~> 3.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
