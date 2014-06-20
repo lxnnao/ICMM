@@ -37,8 +37,8 @@
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
   </head>
 
-  <body class="metrouicss" style="width: 1500px;">
-    <div class="page secondary fg-color-white">
+  <body class="metrouicss" >
+    <div class="page secondary with-sidebar fg-color-white">
       <div class="page-header">
         <div class="page-header-content" style="height: 135px;">
 
@@ -156,6 +156,13 @@
 
 
       </div>
+
+    <div class="page-sidebar">
+        <ul>
+            <li><a><i class="icon-cube"></i>Item</a></li>
+            ...
+        </ul>
+    </div>
 
       <div class="page-region">
         <%= yield %>
