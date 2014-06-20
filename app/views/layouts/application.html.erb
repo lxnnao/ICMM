@@ -37,7 +37,7 @@
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
   </head>
 
-  <body class="metrouicss" >
+  <body class="metrouicss">
     <div class="page secondary with-sidebar fg-color-white">
       <div class="page-header">
         <div class="page-header-content" style="height: 135px;">
@@ -157,20 +157,19 @@
 
       </div>
 
-    <div class="page-sidebar">
+    <div class="page-sidebar " style="background-color:#1d1d1d !important">
         <ul>
-          <li class="sticker sticker-color-blue " data-role="dropdown">
-            <a><i class="icon-cube"></i>Menu</a>
+          <li class="sticker sticker-color-red " data-role="dropdown"  style="background-color:#F00000 !important">
+            <a><i class="icon-cube"></i><%=controller.controller_name%></a>
               <ul class="sub-menu light sidebar-dropdown-menu">
-                <li class="sticker sticker-color-blue">
-                  <a><i class="icon-cube"></i>Item</a>
+                <li class="sticker sticker-color-red">
+                  <a><i class="icon-cube"></i><%=controller.action_name%></a>
                     <ul class="sub-menu light sidebar-dropdown-menu">
-
                     </ul>
                 </li>
               </ul>
           </li>
-          <li class="sticker sticker-color-blue " data-role="dropdown">
+          <li class="sticker sticker-color-red " data-role="dropdown">
             <a><i class="icon-cube"></i>Menu2</a>
               <ul class="sub-menu light sidebar-dropdown-menu">
                 <li class="sticker sticker-color-blue">
