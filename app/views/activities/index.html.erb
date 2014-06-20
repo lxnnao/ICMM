@@ -7,7 +7,7 @@
             	<% if (index%PAGE_TITLE_COUNT)==0 then %>
             		<% framepageid=framepageid+1 %>
             		<% frameid= "#frame"+framepageid.to_s %>
-            	<li ><a href=<%=frameid%> ><%=framepageid%></a></li>
+            	<li class=<%= (framepageid==1) ? "active" : "" %> ><a href=<%=frameid%> ><%=framepageid%></a></li>
             	<% end %>
             <% end %>
         </ul>
