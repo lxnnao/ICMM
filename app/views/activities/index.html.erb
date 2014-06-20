@@ -4,7 +4,7 @@
         <ul>
         	<% framepageid= 0 %>
         	<% @activities.each_with_index do |activities,index| %>
-            	<% if (index%12)==0 then %>
+            	<% if (index%PAGE_TITLE_COUNT)==0 then %>
             		<% framepageid=framepageid+1 %>
             		<% frameid= "#frame"+framepageid.to_s %>
             	<li ><a href=<%=frameid%> ><%=framepageid%></a></li>
@@ -14,10 +14,10 @@
         <div class="frames" style="width:1000px;border:0px">
         	<% framepageid= 0 %>
         	<% @activities.each_with_index do |activity,index| %>
-            	<% if (index%12)==11 then %>
+            	<% if ((index%PAGE_TITLE_COUNT)==(PAGE_TITLE_COUNT-1)) then %>
             		<% frameid= "frame"+(framepageid+1).to_s %>
 	            	<%= content_tag :div, class: "frame", id: frameid  do -%>
-						<% (@activities[framepageid*12 .. framepageid*12 +11]).each_with_index do |activity2,index2| %>
+						<% (@activities[framepageid*PAGE_TITLE_COUNT .. ((framepageid+1)*PAGE_TITLE_COUNT-1)]).each_with_index do |activity2,index2| %>
 	<% if activity2.status=='1' then %>
 		    <div class="tile bg-color-green double outline-color-red">
 		<% else %>
@@ -41,11 +41,11 @@
 					<% end -%>
 					<% framepageid=framepageid+1 %>
 				<% else %>
-					<% if ((framepageid+1)*12)>@activities.size then %>
+					<% if ((framepageid+1)*PAGE_TITLE_COUNT)>@activities.size then %>
 
 	            		<% frameid= "frame"+(framepageid+1).to_s %>
 		            	<%= content_tag :div, class: "frame", id: frameid  do -%>
-							<% (@activities[framepageid*12 .. framepageid*12 +11]).each_with_index do |activity2,index2| %>
+							<% (@activities[framepageid*PAGE_TITLE_COUNT .. ((framepageid+1)*PAGE_TITLE_COUNT-1)]).each_with_index do |activity2,index2| %>
 	<% if activity2.status=='1' then %>
 		    <div class="tile bg-color-green double outline-color-red">
 		<% else %>
