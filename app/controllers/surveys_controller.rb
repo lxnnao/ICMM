@@ -3,7 +3,7 @@ class SurveysController < ApplicationController
 
   # GET /surveys
   def index
-    @surveys = Survey.all
+    @surveys = Survey.paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /surveys/1

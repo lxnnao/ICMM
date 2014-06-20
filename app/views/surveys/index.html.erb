@@ -1,10 +1,13 @@
-<h1>Surveys</h1>
-<p id="notice"><%= notice %></p>
-<% @surveys.each do |survey| %>
-  <div class="article">
-    <h2><%= link_to survey.survey_name, survey %></h2>
-    <%= pluralize(survey.survey_questions.size, "Question") %>
-  </div>
-<% end %>
-<br>
-<p><%= link_to 'New Survey', new_survey_path %></p>
+<div class="page-region-content">
+	<h1>Surveys</h1>
+	<% @surveys.each do |survey| %>
+	  <div class="article">
+	    <h2><%= link_to survey.survey_name, survey %></h2>
+	    <%= pluralize(survey.survey_questions.size, "Question") %>
+	  </div>
+	<% end %>
+	<br>
+	<p><%= link_to 'New Survey', new_survey_path %></p>
+</div>
+
+<%= will_paginate @surveys %>
