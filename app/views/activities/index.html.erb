@@ -11,41 +11,59 @@
             	<% end %>
             <% end %>
         </ul>
-        <div class="frames" style="width:1000px">
+        <div class="frames" style="width:1000px;border:0px">
         	<% framepageid= 0 %>
         	<% @activities.each_with_index do |activity,index| %>
             	<% if (index%12)==11 then %>
             		<% frameid= "frame"+(framepageid+1).to_s %>
 	            	<%= content_tag :div, class: "frame", id: frameid  do -%>
 						<% (@activities[framepageid*12 .. framepageid*12 +11]).each_with_index do |activity2,index2| %>
-    <% if activity2.status=='1' then %>
+	<% if activity2.status=='1' then %>
 		    <div class="tile bg-color-green double outline-color-red">
 		<% else %>
 			<div class="tile bg-color-red double outline-color-green">
 	<% end %>
-	   	    <div class="tile-content">
-	        <%= link_to(activity2) do %>
-			  <p>
-			   <div><%= activity2.activity_name %></div>
-			   <div>[<%= (activity2.startdate||Time.now).strftime("%Y-%m-%d")  %>]</div>
-			    <div>地点：<%= activity2.venues %></div>
-			    <div>状态：<%= activity2.status %></div>
-			  </p>
-		    <% end %>
-	    </div>
 
-    </div>
+		   	    <div class="tile-content">
+		        <%= link_to(activity2) do %>
+				  <p>
+				   <div><%= activity2.activity_name %></div>
+				   <div>[<%= (activity2.startdate||Time.now).strftime("%Y-%m-%d")  %>]</div>
+				    <div>地点：<%= activity2.venues %></div>
+				    <div>状态：<%= activity2.status %></div>
+				  </p>
+			    <% end %>
+		    	</div>
+
+    		</div>
 
 						<%end%>
 					<% end -%>
 					<% framepageid=framepageid+1 %>
 				<% else %>
-					<% if ((framepageid+1)*4)>@activities.size then %>
+					<% if ((framepageid+1)*12)>@activities.size then %>
 
 	            		<% frameid= "frame"+(framepageid+1).to_s %>
 		            	<%= content_tag :div, class: "frame", id: frameid  do -%>
-							<% (@activities[framepageid*4 .. framepageid*4 +3]).each_with_index do |activity2,index2| %>
-	                                 testlase<%=framepageid%>
+							<% (@activities[framepageid*12 .. framepageid*12 +11]).each_with_index do |activity2,index2| %>
+	<% if activity2.status=='1' then %>
+		    <div class="tile bg-color-green double outline-color-red">
+		<% else %>
+			<div class="tile bg-color-red double outline-color-green">
+	<% end %>
+
+		   	    <div class="tile-content">
+		        <%= link_to(activity2) do %>
+				  <p>
+				   <div><%= activity2.activity_name %></div>
+				   <div>[<%= (activity2.startdate||Time.now).strftime("%Y-%m-%d")  %>]</div>
+				    <div>地点：<%= activity2.venues %></div>
+				    <div>状态：<%= activity2.status %></div>
+				  </p>
+			    <% end %>
+		    	</div>
+
+    		</div>
 							<%end%>
 						<% end -%>
 					<% end %>
