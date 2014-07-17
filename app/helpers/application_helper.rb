@@ -8,11 +8,19 @@ module ApplicationHelper
 		link_to(name, '#', class: "add_fields", data: {id: id, fields: fields.gsub("\n", "")})
 	end
 	def link_to_select(nametext,controllername,actionname,idname)
-		if idname.present? then
-			link_to nametext, controller: controllername,action: actionname, id: idname
-		else
-			link_to nametext, controller: controllername,action: actionname
-		end
+			link_to ({controller: controllername,action: actionname,id:idname}) do
+			    	nametext
+			end
+
+		# if idname.present? then
+		#     link_to ({controller: controllername,action: actionname},id: idname) do
+		#     	nametext
+		#     end
+		# else
+		# 	link_to ({controller: controllername,action: actionname}) do
+		#     	nametext
+		#     end
+		# end
 	end
 	def link_to_new(controllername)
 			link_to_select "new",controllername,"new",nil
