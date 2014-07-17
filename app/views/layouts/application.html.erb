@@ -155,8 +155,7 @@
 
 
 
-      </div>
-
+</div>
     <div class="page-sidebar " style="background-color:#1d1d1d !important">
         <ul>
           <li class="sticker sticker-color-red " data-role="dropdown"  style="background-color:#F00000 !important">
@@ -164,7 +163,14 @@
               <ul class="sub-menu light sidebar-dropdown-menu">
                 <li class="sticker sticker-color-red">
                   <a><i class="icon-cube"></i><%=controller.action_name%></a>
-                  <%=(link_to_select "test",controller.controller_name,"new",) %>
+                    <% if user_signed_in? -%>
+                      <% unless(["homes"].include? controller.controller_name) then %>
+                      <%=(link_to_new controller.controller_name) %>
+                      <%if params[:id].present? %>
+                      <%=(link_to_edit controller.controller_name,params[:id]) %>
+                      <%end%>
+                      <%end%>
+                    <%end%>
                     <ul class="sub-menu light sidebar-dropdown-menu">
                     </ul>
                 </li>
@@ -195,7 +201,6 @@
       </div>
     <%end%>
     </div>
-
       <div class="page-region">
         <%= yield %>
       </div>
