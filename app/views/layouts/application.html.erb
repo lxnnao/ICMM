@@ -164,6 +164,7 @@
               <ul class="sub-menu light sidebar-dropdown-menu">
                 <li class="sticker sticker-color-red">
                   <a><i class="icon-cube"></i><%=controller.action_name%></a>
+                  <%=(link_to_select "test",controller.controller_name,"new",) %>
                     <ul class="sub-menu light sidebar-dropdown-menu">
                     </ul>
                 </li>
@@ -182,6 +183,17 @@
           </li>
 
         </ul>
+
+    <% if alert.present? then %>
+      <div class="tile bg-color-green outline-color-red" style="width:213px;border:1px">
+          <div class="tile-content">
+            <p id="notice"><%= alert %></p>
+            <div class="brand">
+              <div class="name">alert</div>
+            </div>
+          </div>
+      </div>
+    <%end%>
     </div>
 
       <div class="page-region">
