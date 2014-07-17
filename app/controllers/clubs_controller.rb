@@ -1,4 +1,5 @@
 class ClubsController < ApplicationController
+  load_and_authorize_resource
   before_action :set_club, only: [:show, :edit, :update, :destroy,:register]
 
   # GET /clubs
