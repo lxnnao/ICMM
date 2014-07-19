@@ -31,4 +31,7 @@ module ApplicationHelper
 	def link_to_delete(controllername,idname)
 			link_to_select "destroy",controllername,"destroy",idname
 	end
+	def link_to_index(controllername)
+			link_to_select "index",controllername,"index",nil
+	end
 end
