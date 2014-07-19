@@ -163,11 +163,16 @@
               <ul class="sub-menu light sidebar-dropdown-menu">
                 <li class="sticker sticker-color-red">
                   <a><i class="icon-cube"></i><%=controller.action_name%></a>
+
+
                     <% if user_signed_in? -%>
                       <% unless(["homes"].include? controller.controller_name) then %>
+                      <%=(link_to_index controller.controller_name) %>
                       <%=(link_to_new controller.controller_name) %>
                       <%if params[:id].present? %>
                       <%=(link_to_edit controller.controller_name,params[:id]) %>
+                      <%=(link_to_delete controller.controller_name,params[:id]) %>
+
                       <%end%>
                       <%end%>
                     <%end%>
@@ -190,12 +195,13 @@
 
         </ul>
 
-    <% if alert.present? then %>
+    <% if alert.present? or notice.present? then %>
       <div class="tile bg-color-green outline-color-red" style="width:213px;border:1px">
           <div class="tile-content">
             <p id="notice"><%= alert %></p>
+            <p id="notice"><%= notice %></p>
             <div class="brand">
-              <div class="name">alert</div>
+              <div class="name">notice</div>
             </div>
           </div>
       </div>
