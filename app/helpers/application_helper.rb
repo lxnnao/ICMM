@@ -29,7 +29,7 @@ module ApplicationHelper
 			link_to_select "edit",controllername,"edit",idname
 	end
 	def link_to_delete(controllername,idname)
-			link_to_select "destroy",controllername,"destroy",idname
+			link_to "destroy",{controller: controllername,action: "destroy",id:idname},method: :delete, data: { confirm: 'Are you sure?' }
 	end
 	def link_to_index(controllername)
 			link_to_select "index",controllername,"index",nil
