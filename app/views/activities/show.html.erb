@@ -1,131 +1,170 @@
-    <div class="page">
-        <div class="page-header">
-            <div class="page-header-content">
-          <p><%= link_to 'Edit', edit_activity_path(@activity) %> |
-<%= link_to 'Back', activities_path %></p>
-          <p><font size="6" face="微软雅黑">活动详情：</font></b></p>
-        </div>
-        <div class="page-region">
-            <div class="page-region-content">
+<div class="page">
+  <div class="page-header">
+    <div class="page-header-content">
+      <br/>
+      <p><font size="6" face="微软雅黑"><%= @activity.activity_name %>：</font></b></p>
+    </div>
+  </div>
+  <div class="page-sidebar " style="background-color:#1d1d1d !important">
+      <div class="tile image bg-color-green outline-color-red" style="width:213px;border:1px">
+          <div  class="tile-content tile image">
+            <img src="/srcImg/activity.jpg" alt="">
+            <div class="brand">
+              <div class="name">image</div>
+            </div>
+          </div>
+      </div>
+      <%=button_to_join controller.controller_name,params[:id]%>
+      <%=button_to_select 'join as volunteer', controller.controller_name,'volunteer',params[:id]%>
+  </div>
+  <div class="page-region">
+    <div class="page-region-content">
+      <div class="grid span12" style="margin-left: -25px">
+        <div class="row">
+            <div class="span5">
+                <ul class="replies">
+                    <li class="bg-color-blue">
+                        <div class="avatar"><img src="/srcImg/Green_1.gif"></div>
+                        <div class="reply" >
+                            <div class="date"><%=@activity.startdate%> </div>
+                            <div class="author">活动</div>
+                            <div class="text">
+                              <strong>Activity name:</strong>
+                              <%= @activity.activity_name %>
+                                <strong>说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到</strong>
+                                <%= @activity.department_id %>
+                              <p>
+                                <strong>Activity name:</strong>
+                                <%= @activity.activity_name %>
 
-<p id="notice"><%= notice %></p>
+                              </p>
+                              <div>
+                                <strong>Department1111111111
+                                  11111111111:</strong>
+                                <%= @activity.department_id %>
+                              </div>
+                              <p>
+                                <strong>Department:</strong>
+                                <%= @activity.department_id %>
+                              </p>
+                              <p>
+                                <strong>Status:</strong>
+                                <%= @activity.status %>
+                              </p>
+                              <p>
+                                <strong>Activity type:</strong>
+                                <%= @activity.activity_type %>
+                              </p>
 
-<p>
-  <strong>Activity name:</strong>
-  <%= @activity.activity_name %>
-</p>
+                              <p>
+                                <strong>Descriptions:</strong>
+                                <%= @activity.descriptions %>
+                              </p>
+                              <p>
+                                <strong>Remark:</strong>
+                                <%= @activity.remark %>
+                              </p>
+                            </div>
+                        </div>
+                    </li>
 
-<p>
-  <strong>Activity type:</strong>
-  <%= @activity.activity_type %>
-</p>
+                  <li class="bg-color-blue">
+                        <div class="avatar"><img src="/srcImg/Green_3.gif"></div>
+                        <div class="reply">
+                            <div class="date">01.17.2013</div>
+                            <div class="author">人事</div>
+                            <div class="text">
+                              <p>
+                                <strong>Presenter:</strong>
+                                <%= @activity.presenter %>
+                              </p>
+                              <p>
+                                <strong>Volunteers:</strong>
+                                <%= @activity.volunteers %>
+                              </p>
 
-<p>
-  <strong>Startdate:</strong>
-  <%= @activity.startdate %>
-</p>
+                              <p>
+                                <strong>Attendees:</strong>
+                                <%= @activity.attendees %>
+                              </p>
+                              <p>
+                                <strong>Contact:</strong>
+                                <%= @activity.contact_id %>
+                              </p>
+                            </div>
+                        </div>
+                    </li>
 
-<p>
-  <strong>Starttime:</strong>
-  <%= @activity.starttime %>
-</p>
 
-<p>
-  <strong>Endtime:</strong>
-  <%= @activity.endtime %>
-</p>
+                </ul>
+            </div>
+            <div class="span7">
+                <ul class="replies">
+                    <li class="bg-color-pink">
+                        <div class="avatar"><img src="/srcImg/Green_2.gif"></div>
+                        <div class="reply">
+                            <div class="date">01.17.2013</div>
+                            <div class="author">时间</div>
+                            <div class="text">
+                              <p>
+                                <strong>Venues:</strong>
+                                <%= @activity.venues %>
+                              </p>
 
-<p>
-  <strong>Venues:</strong>
-  <%= @activity.venues %>
-</p>
+                              <p>
+                                <strong>Durringtime:</strong>
+                                <%= @activity.durringtime %>
+                              </p>
 
-<p>
-  <strong>Durringtime:</strong>
-  <%= @activity.durringtime %>
-</p>
 
-<p>
-  <strong>Presenter:</strong>
-  <%= @activity.presenter %>
-</p>
+                              <p>
+                                <strong>Startdate:</strong>
+                                <%= @activity.startdate %>
+                              </p>
 
-<p>
-  <strong>Descriptions:</strong>
-  <%= @activity.descriptions %>
-</p>
+                              <p>
+                                <strong>Starttime:</strong>
+                                <%= @activity.starttime %>
+                              </p>
 
-<p>
-  <strong>Volunteers:</strong>
-  <%= @activity.volunteers %>
-</p>
+                              <p>
+                                <strong>Endtime:</strong>
+                                <%= @activity.endtime %>
+                              </p>
+                            </div>
+                        </div>
+                    </li>
+                  <li class="bg-color-pink">
+                        <div class="avatar"><img src="/srcImg/Green_4.gif"></div>
+                        <div class="reply">
+                            <div class="date">01.17.2013</div>
+                            <div class="author">管理</div>
+                            <div class="text">
+                              <p>
+                                <strong>Has award:</strong>
+                                <%= @activity.has_award %>
+                              </p>
+                              <p>
+                                <strong>Operator:</strong>
+                                <%= @activity.operator %>
+                              </p>
 
-<p>
-  <strong>Attendees:</strong>
-  <%= @activity.attendees %>
-</p>
+                              <p>
+                                <strong>Create time:</strong>
+                                <%= @activity.create_time %>
+                              </p>
 
-<p>
-  <strong>Has award:</strong>
-  <%= @activity.has_award %>
-</p>
+                              <p>
+                                <strong>Update time:</strong>
+                                <%= @activity.update_time %>
+                              </p>
+                            </div>
+                        </div>
+                    </li>
 
-<p>
-  <strong>Department:</strong>
-  <%= @activity.department_id %>
-</p>
-
-<p>
-  <strong>Language type:</strong>
-  <%= @activity.language_type %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @activity.status %>
-</p>
-
-<p>
-  <strong>Activity name eng:</strong>
-  <%= @activity.activity_name_eng %>
-</p>
-
-<p>
-  <strong>Venues eng:</strong>
-  <%= @activity.venues_eng %>
-</p>
-
-<p>
-  <strong>Remark:</strong>
-  <%= @activity.remark %>
-</p>
-
-<p>
-  <strong>Contact:</strong>
-  <%= @activity.contact_id %>
-</p>
-
-<p>
-  <strong>Operator:</strong>
-  <%= @activity.operator %>
-</p>
-
-<p>
-  <strong>Create time:</strong>
-  <%= @activity.create_time %>
-</p>
-
-<p>
-  <strong>Update time:</strong>
-  <%= @activity.update_time %>
-</p>
-
+                </ul>
             </div>
         </div>
-    </div>
-
-   <div class="page fill">
-       <%= button_to 'join',join_activity_path(@activity) %>
-<%= button_to 'join as volunteer',volunteer_activity_path(@activity) %>
-    </div>
+      </div>
+</div>
 

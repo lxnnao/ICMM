@@ -34,4 +34,12 @@ module ApplicationHelper
 	def link_to_index(controllername)
 			link_to_select "index",controllername,"index",nil
 	end
+
+	def button_to_select(nametext,controllername,actionname,idname)
+		button_to nametext,{controller: controllername,action: actionname,id:idname}
+	end
+
+	def button_to_join(controllername,idname)
+		button_to "join",{controller: controllername,action: "join",id:idname}
+	end
 end
