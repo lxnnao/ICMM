@@ -1,3 +1,5 @@
+en:
+  activerecord:
     models:
       department:
     attributes:
