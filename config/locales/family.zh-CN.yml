@@ -1,0 +1,16 @@
+    models:
+      family:
+    attributes:
+      family:
+        family_id: "员工工号"
+        family_name: "员工姓名"
+        family_idcard: "家属身份证号码"
+        emp_id: "员工工号"
+        is_child: "是否儿童"
+        m_f: "性别"
+        name: "家属姓名"
+        phone: "家属手机号码"
+        email: "家属邮箱地址"
+        bus_line: "班车路线"
+        create_time: "创建时间"
+        update_time: "更新时间"

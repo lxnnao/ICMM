@@ -1,0 +1,12 @@
+    models:
+      award:
+    attributes:
+      award:
+        award_id: "奖品编号"
+        name: "奖品名称"
+        activity_id: "活动名称"
+        qty: "奖品数量"
+        status: "状态"
+        descriptions: “奖品描述"
+        create_time: "创建时间"
+        update_time: "更新时间"

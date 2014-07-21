@@ -1,0 +1,12 @@
+    models:
+      register:
+    attributes:
+      register:
+        register_id:
+        emp_id: "俱乐部成员工号"
+        club_id: "俱乐部名称"
+        is_manager: "是否管理员"
+        role_level: "级别"
+        operater: "创建人"
+        create_time: "创建时间"
+        update_time: "更新时间"

@@ -1,0 +1,12 @@
+    models:
+      register:
+    attributes:
+      register:
+        register_id:
+        emp_id: "Club Member ID#"
+        club_id: "Club Name"
+        is_manager: "Club Manager or not"
+        role_level: "Level"
+        operater: "Creator"
+        create_time: "Create Time"
+        update_time: "Update Time"

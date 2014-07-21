@@ -1,0 +1,16 @@
+    models:
+      employee:
+    attributes:
+      employee:
+        emp_id:
+        emp_badge: "Employee ID#"
+        emp_name: "Employee Name"
+        emp_phone: "Desk Phone"
+        emp_mobile: "Mobile Phone"
+        emp_email: "Email Address"
+        emp_familyname: "Family Name"
+        is_volunteer: "Volunteer or not"
+        emp_idcard: "Family ID#"
+        status: "Status"
+        create_time: "Create Time"
+        update_time: "Update Time"

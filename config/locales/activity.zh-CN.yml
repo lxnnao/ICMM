@@ -5,3 +5,31 @@ zh-CN:
     attributes:
       activity:
         activity_name: "活动名称"
+        activity_type: "活动类型"
+        startdate: "活动日期"
+        starttime: "活动开始时间"
+        endtime: "活动结束时间"
+        venues: "活动地点"
+        durringtime: "活动持续时间"
+        presenter:
+        descriptions: "活动描述"
+        volunteers: "志愿者招募人数"
+        attendees: "参与者人数"
+        has_award:
+        award_id:
+        department_id: "活动组织部门"
+        language_type:
+        status: "活动状态"
+        activity_name_eng:
+        venues_eng:
+        remark: "备注"
+        contact_id: "活动联系人"
+        operator: "创建人"
+        create_time: "创建时间"
+
+
+
+
+
+
+

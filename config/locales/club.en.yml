@@ -1,0 +1,12 @@
+    models:
+      club:
+    attributes:
+      club:
+        club_id:
+        club_name: "Club Name"
+        status: "Status"
+        descriptions: "Club Description"
+        language_type: "Language"
+        operator: "Creator"
+        create_time: "Create Time"
+        update_time: "Update Time"

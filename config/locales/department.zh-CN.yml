@@ -1,0 +1,9 @@
+    models:
+      department:
+    attributes:
+      department:
+        departmentid:
+        departmentname: "部门名称"
+        departmentcode: "部门编号"
+        create_time: "创建时间"
+        update_time: "更新时间"

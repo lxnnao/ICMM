@@ -1,0 +1,11 @@
+    models:
+      currentactivity:
+    attributes:
+      currentactivity:
+        currentactivity_id: "Current Activity"
+        activity_id: "Activity ID"
+        volunteer_qty: "Number of Current Volunteers"
+        attendee_qty: "Number of Current Attendees"
+        status: "Status"
+        create_time: "Create Time"
+        update_time: "Update Time"

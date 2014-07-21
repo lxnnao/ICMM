@@ -1,0 +1,12 @@
+    models:
+      club:
+    attributes:
+      club:
+        club_id: "俱乐部编号"
+        club_name: "俱乐部名称"
+        status: "状态"
+        descriptions: "俱乐部描述"
+        language_type: "语言"
+        operator: "创建人"
+        create_time: "创建时间"
+        update_time: "更新时间"

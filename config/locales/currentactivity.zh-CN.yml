@@ -1,0 +1,11 @@
+    models:
+      currentactivity:
+    attributes:
+      currentactivity:
+        currentactivity_id: "当前活动名称"
+        activity_id: "活动编号"
+        volunteer_qty: "当前志愿者人数"
+        attendee_qty: "当前参与者人数"
+        status: "状态"
+        create_time: "创建时间"
+        update_time: "更新时间"

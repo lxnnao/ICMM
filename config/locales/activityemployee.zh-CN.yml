@@ -1,0 +1,12 @@
+    models:
+      activityemployee:
+    attributes:
+      activityemployee:
+        activity_employee_id: "参与者工号"
+        activity_id: "活动名称"
+        attendee_id: "参与者姓名"
+        is_activisty_volunteer: "是否志愿者"
+        is_award: "是否中奖"
+        award_item_id: "奖品编号"
+        create_time: "创建时间"
+        update_time: "更新时间"

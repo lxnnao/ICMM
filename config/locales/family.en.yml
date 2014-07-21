@@ -1,0 +1,16 @@
+    models:
+      family:
+    attributes:
+      family:
+        family_id:
+        family_name: "Employee Name"
+        family_idcard: "Family ID#"
+        emp_id: "Employee ID#"
+        is_child: "Is Child or not"
+        m_f: "Gender"
+        name: "Family Name"
+        phone: "Family Mobile"
+        email: "Family Email"
+        bus_line: "Bus Line"
+        create_time: "Create Time"
+        update_time: "Update Time"

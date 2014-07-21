@@ -1,0 +1,12 @@
+    models:
+      activityemployee:
+    attributes:
+      activityemployee:
+        activity_employee_id: "Employee ID#"
+        activity_id: "Activity"
+        attendee_id: "Attendee ID#"
+        is_activisty_volunteer: "Volunteer or not"
+        is_award: "Award or not"
+        award_item_id: "Award ID"
+        create_time: "Create Time"
+        update_time: "Update Time"

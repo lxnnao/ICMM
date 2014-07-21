@@ -1,0 +1,16 @@
+    models:
+      employee:
+    attributes:
+      employee:
+        emp_id: "员工工号"
+        emp_badge: "员工工号"
+        emp_name: "员工姓名"
+        emp_phone: "分机"
+        emp_mobile: "手机号码"
+        emp_email: "邮箱地址"
+        emp_familyname: "家属姓名"
+        is_volunteer: "是否志愿者"
+        emp_idcard: "家属身份证号码"
+        status: "状态"
+        create_time: "创建时间"
+        update_time: "更新时间"

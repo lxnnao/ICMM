@@ -1,0 +1,12 @@
+    models:
+      award:
+    attributes:
+      award:
+        award_id:
+        name: "Award Name"
+        activity_id: "Activity ID"
+        qty: "Amount of Awards"
+        status: "Status"
+        descriptions: "Award Description"
+        create_time: "Creat Time"
+        update_time: "Update Time"
