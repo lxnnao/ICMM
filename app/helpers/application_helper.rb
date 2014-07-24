@@ -7,7 +7,7 @@ module ApplicationHelper
 		end
 		link_to(name, '#', class: "add_fields", data: {id: id, fields: fields.gsub("\n", "")})
 	end
-	def link_to_select(nametext,controllername,actionname,idname)
+	def link_to_select(nametext,controllername,actionname,idname=nil)
 			link_to ({controller: controllername,action: actionname,id:idname}) do
 			    	nametext
 			end
@@ -23,7 +23,7 @@ module ApplicationHelper
 		# end
 	end
 	def link_to_new(controllername)
-			link_to_select "new",controllername,"new",nil
+			link_to_select "new",controllername,"new"
 	end
 	def link_to_edit(controllername,idname)
 			link_to_select "edit",controllername,"edit",idname
@@ -32,7 +32,7 @@ module ApplicationHelper
 			link_to "destroy",{controller: controllername,action: "destroy",id:idname},method: :delete, data: { confirm: 'Are you sure?' }
 	end
 	def link_to_index(controllername)
-			link_to_select "index",controllername,"index",nil
+			link_to_select "index",controllername,"index"
 	end
 
 	def button_to_select(nametext,controllername,actionname,idname)
