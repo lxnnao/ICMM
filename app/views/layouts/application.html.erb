@@ -35,6 +35,39 @@
     <!-- For all other devices -->
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+    <script type="text/javascript">
+      function ChangeTextBoxHeight()
+      {
+        var x=document.getElementsByName("longtextbox");
+        for (var i=0;i<x.length;i++)
+          {
+          // do something with each paragraph
+            x[i].style.minHeight="150px";
+            x[i].style.height="auto";
+            //alert(x[i].innerHTML+x[i].offsetHeight + "px");
+
+          }
+      }
+    </script>
+    <style type="text/css">
+        .textboxImg >img {
+                  width: 50px;
+                  height: 50px;
+                  overflow: hidden;
+                  display: inline-block !important;
+                  vertical-align: middle !important;
+                  background: #6e6e6e;
+                  box-shadow-bottom: inset 0px 0px 3px #fff;
+                }
+        .textboxImg,.textbox{
+                  padding:0px;
+                  margin-top: 10px;
+                  margin-right: 10px;
+                  margin-bottom: 10px;
+                  margin-left: 10px;
+                  bottom:0px;
+                  }
+    </style>
   </head>
 
   <body class="metrouicss">
@@ -171,6 +204,7 @@
                       <%=(link_to_new controller.controller_name) %>
                       <%if params[:id].present? %>
                       <%=(link_to_edit controller.controller_name,params[:id]) %>
+                      <%=(link_to_show controller.controller_name,params[:id]) %>
                       <%=(link_to_delete controller.controller_name,params[:id]) %>
 
                       <%end%>
