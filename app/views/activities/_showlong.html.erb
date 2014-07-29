@@ -1,0 +1,84 @@
+     <div name="longtextbox" class="bg-color-red" style="width:900px;">
+          <div name="longtextboxcontent" style="width:900px;" onclick="ChangeTextBoxHeight()">
+              <div class="replies">
+                  <div class="bg-color-red">
+                      <div class="avatar"><img src="/srcImg/Green_3.gif"/></div>
+                      <div class="reply">
+                      <div class="date"><%=@activity.startdate%> </div>
+                      <div class="author">活动</div>
+                      <div class="author"><strong>Activity name:</strong><%= @activity.activity_name %></div>
+                      <div class="text" style="text-indent: -25em;white-space: pre-wrap;width:800px;" >
+        <strong>说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到说说你听到</strong>
+        <strong>Department:</strong><%= @activity.department_id %>
+        <strong>Department:</strong><%= @activity.department_id %>
+        <strong>Status:</strong><%= @activity.status %>
+        <strong>Activity type:</strong><%= @activity.activity_type %>
+        <strong>Descriptions:</strong><%= @activity.descriptions %>
+        <strong>Remark:</strong><%= @activity.remark %>
+                      </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+     </div>
+     <div name="longtextbox" class="bg-color-blue" style="width:900px;">
+          <div name="longtextboxcontent" style="width:900px;" onclick="ChangeTextBoxHeight()">
+              <div class="replies">
+                  <div class="bg-color-blue">
+                      <div class="avatar"><img src="/srcImg/Green_2.gif"/></div>
+                      <div class="reply">
+                      <div class="date"><%=@activity.startdate%> </div>
+                      <div class="author">时间</div>
+                      <div class="author"><strong>Activity name:</strong><%= @activity.activity_name %></div>
+                      <div class="text" style="text-indent: -25em;white-space: pre-wrap;width:800px;" >
+          <strong>Venues:</strong><%= @activity.venues %>
+          <strong>Durringtime:</strong><%= @activity.durringtime %>
+          <strong>Startdate:</strong><%= @activity.startdate %>
+          <strong>Starttime:</strong><%= @activity.starttime %>
+          <strong>Endtime:</strong><%= @activity.endtime %>
+                      </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+     </div>
+     <div name="longtextbox" class="bg-color-red" style="width:900px;">
+          <div name="longtextboxcontent" style="width:900px;" onclick="ChangeTextBoxHeight()">
+              <div class="replies">
+                  <div class="bg-color-red">
+                      <div class="avatar"><img src="/srcImg/Green_3.gif"/></div>
+                      <div class="reply">
+                      <div class="date"><%=@activity.startdate%> </div>
+                      <div class="author">人事</div>
+                      <div class="author"><strong>Activity name:</strong><%= @activity.activity_name %></div>
+                      <div class="text" style="text-indent: -25em;white-space: pre-wrap;width:800px;" >
+          <strong>Presenter:</strong><%= @activity.presenter %>
+          <strong>Volunteers:</strong><%= @activity.volunteers %>
+          <strong>Attendees:</strong><%= @activity.attendees %>
+          <strong>Contact:</strong><%= @activity.contact_id %>
+                      </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+     </div>
+     <div name="longtextbox" class="bg-color-blue" style="width:900px;">
+          <div name="longtextboxcontent" style="width:900px;" onclick="ChangeTextBoxHeight()">
+              <div class="replies">
+                  <div class="bg-color-blue">
+                      <div class="avatar"><img src="/srcImg/Green_4.gif"/></div>
+                      <div class="reply">
+                      <div class="date"><%=@activity.startdate%> </div>
+                      <div class="author">管理</div>
+                      <div class="author"><strong>Activity name:</strong><%= @activity.activity_name %></div>
+                      <div class="text" style="text-indent: -25em;white-space: pre-wrap;width:800px;" >
+          <strong>Has award:</strong><%= @activity.has_award %>
+          <strong>Operator:</strong><%= @activity.operator %>
+          <strong>Create time:</strong><%= @activity.create_time %>
+          <strong>Update time:</strong><%= @activity.update_time %>
+                      </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
