@@ -28,13 +28,15 @@ module ApplicationHelper
 	def link_to_edit(controllername,idname)
 			link_to_select "edit",controllername,"edit",idname
 	end
+	def link_to_show(controllername,idname)
+			link_to_select "show",controllername,"show",idname
+	end
 	def link_to_delete(controllername,idname)
 			link_to "destroy",{controller: controllername,action: "destroy",id:idname},method: :delete, data: { confirm: 'Are you sure?' }
 	end
 	def link_to_index(controllername)
 			link_to_select "index",controllername,"index"
 	end
-
 	def button_to_select(nametext,controllername,actionname,idname)
 		button_to nametext,{controller: controllername,action: actionname,id:idname}
 	end
