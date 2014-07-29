@@ -6,12 +6,9 @@
     </div>
   </div>
   <div class="page-sidebar " style="background-color:#1d1d1d !important">
-      <div class="tile image bg-color-green outline-color-red" style="width:213px;border:1px">
+      <div class="tile image bg-color-green outline-color-red">
           <div  class="tile-content tile image">
             <img src="/srcImg/activity.jpg" alt="">
-            <div class="brand">
-              <div class="name">image</div>
-            </div>
           </div>
       </div>
       <%=button_to_join controller.controller_name,params[:id]%>
@@ -20,7 +17,7 @@
   <%if (@activity.descriptions.present? and @activity.descriptions.length>100) or (@activity.remark.present? and @activity.remark.length>100) then %>
       <%= render 'showlong' %>
       <%else%>
-       <%= render 'showlong' %>
+       <%= render 'showshort' %>
   <%end if%>
 
 
