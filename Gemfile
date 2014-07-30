@@ -58,3 +58,4 @@ end
 # gem 'debugger'
 gem 'devise_ldap_authenticatable'
 gem 'cancancan'
+gem 'rubysl-ftools'
