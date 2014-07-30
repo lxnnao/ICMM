@@ -5,6 +5,11 @@ Icome::Application.routes.draw do
       get 'display'
     end
   end
+  resources :file_manages do
+    member do
+      post 'upload'
+    end
+  end
   resources :departments
 
   resources :awards

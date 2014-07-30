@@ -48,6 +48,27 @@
 
           }
       }
+
+      function uploadImage(){
+        var imageForm = document.getElementsByName("imageForm");
+        alert("name:"+imageForm.length);
+        var path = document.getElementById("imageFile");
+        if(path.value == ""){
+         alert("文件不能为空!");
+         return;
+        }
+        else{
+            var right3=path.value.substring(path.value.length-3,path.value.length).toLowerCase();
+               if(right3!="jpg"&&right3!="bmp"&&right3!="gif"&&right3!="png"){
+                   alert('只能上传jpg、bmp、gif、png格式的LOGO文件');
+                   return;
+               }
+        }
+        var hidden = document.getElementById("hidden1");
+        hidden.value = "yes";
+
+        //imageForm.submit();
+      }
     </script>
     <style type="text/css">
         .textboxImg >img {
