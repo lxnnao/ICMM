@@ -59,3 +59,7 @@ end
 gem 'devise_ldap_authenticatable'
 gem 'cancancan'
 gem 'rubysl-ftools'
+#'carrierwave', This gem provides a simple and extremely flexible way to
+#upload files from Ruby applications. It works well with Rack based web applications, such as Ruby on Rails.
+#https://github.com/carrierwaveuploader/carrierwave
+gem 'carrierwave'
