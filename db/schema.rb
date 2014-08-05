@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140717073232) do
+ActiveRecord::Schema.define(version: 20140731085634) do
 
   create_table "activities", force: true do |t|
     t.string   "activity_id"
@@ -113,6 +113,20 @@ ActiveRecord::Schema.define(version: 20140717073232) do
     t.string   "phone"
     t.string   "email"
     t.string   "bus_line"
+    t.datetime "create_time"
+    t.datetime "update_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "images", force: true do |t|
+    t.string   "image_id"
+    t.string   "filename"
+    t.string   "disk_filename"
+    t.integer  "filesize"
+    t.string   "content_type"
+    t.string   "description"
+    t.string   "author_id"
     t.datetime "create_time"
     t.datetime "update_time"
     t.datetime "created_at"

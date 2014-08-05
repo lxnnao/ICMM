@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @image.image_id %>
+</p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @image.filename %>
+</p>
+
+<p>
+  <strong>Disk filename:</strong>
+  <%= @image.disk_filename %>
+</p>
+
+<p>
+  <strong>Filesize:</strong>
+  <%= @image.filesize %>
+</p>
+
+<p>
+  <strong>Content type:</strong>
+  <%= @image.content_type %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @image.description %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @image.author_id %>
+</p>
+
+<p>
+  <strong>Create time:</strong>
+  <%= @image.create_time %>
+</p>
+
+<p>
+  <strong>Update time:</strong>
+  <%= @image.update_time %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>

@@ -1,0 +1,49 @@
+<h1>Listing images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Filename</th>
+      <th>Disk filename</th>
+      <th>Filesize</th>
+      <th>Content type</th>
+      <th>Description</th>
+      <th>Author</th>
+      <th>Create time</th>
+      <th>Update time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @images.each do |image| %>
+      <tr>
+        <td><%= image.image_id %></td>
+        <td><%= image.filename %></td>
+        <td><%= image.disk_filename %></td>
+        <td><%= image.filesize %></td>
+        <td><%= image.content_type %></td>
+        <td><%= image.description %></td>
+        <td><%= image.author_id %></td>
+        <td><%= image.create_time %></td>
+        <td><%= image.update_time %></td>
+        <td><%= link_to 'Show', image %></td>
+        <td><%= link_to 'Edit', edit_image_path(image) %></td>
+        <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= form_tag({:action => :upload} ,:multipart => true) %>
+<%= text_field_tag :imgTitle  %>
+<label >Image to Upload</label> <%= file_field_tag :imgFile  %></br>
+<%= submit_tag 'Upload'%>
+
+
+<%= link_to 'New Image', new_image_path %>

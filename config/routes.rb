@@ -1,4 +1,6 @@
 Icome::Application.routes.draw do
+  resources :images
+  match  '/images/upload',:via => [:get, :post]
   resources :surveys do
     member do
       post 'display'

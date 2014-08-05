@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image_id: MyString
+  filename: MyString
+  disk_filename: MyString
+  filesize: 1
+  content_type: MyString
+  description: MyString
+  author_id: MyString
+  create_time: 2014-07-31 16:56:34
+  update_time: 2014-07-31 16:56:34
+
+two:
+  image_id: MyString
+  filename: MyString
+  disk_filename: MyString
+  filesize: 1
+  content_type: MyString
+  description: MyString
+  author_id: MyString
+  create_time: 2014-07-31 16:56:34
+  update_time: 2014-07-31 16:56:34
