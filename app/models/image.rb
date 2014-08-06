@@ -7,7 +7,7 @@ class Image < ActiveRecord::Base
     # end
 
 	# def store_dir
-	# 	  "#{Rails.root}/files"
+	# 	"#{Rails.root}/upload"
 	# end
 	def validate
 		if self.content_type != nil

@@ -1,7 +1,7 @@
 module AbstractFile
   #上传的文件在服务器端上的目录路径
   #cattr_accessor :storage_path
-  @@storage_path = "#{Rails.root}/files"
+  @@storage_path = "#{Rails.root}/upload"
   @@size_limit=7*1024*1024
 def validate_inner
     validate
@@ -58,14 +58,27 @@ end
         nil
       end
   end
+  def check_dir
+    begin
+      if !File.exist?(store_dir)
+        File.makedirs(store_dir,true)              #创建文件夹
+      end
+      store_dir
+    rescue Exception=> ex
+      self.errors.add("check_dir", "文件目录创建失败！"+ex.class.to_s)
+      nil
+    ensure
+    end
+  end
   def load_file
     begin
       File.open(diskfile, "wb") do |f|
         f.write(file.read)
       end
-    rescue
-      self.errors.add("file_load", "上传文件失败！")
+    rescue Exception=> ex
+      self.errors.add("file_load", "上传文件失败！" +ex.class.to_s+ex.exception.to_s)
       nil
+    ensure
     end
   end
   def file_size_limit
@@ -119,12 +132,13 @@ end
       ascii << $1 if filename =~ %r{(\.[a-zA-Z0-9]+)$}
     end
     #判断当前目录中是否存在生成的文件
-
-    while File.exist?(File.join(store_dir, "#{timestamp}_#{ascii}"))
-      #如果生成的文件名与目录中的文件相冲突则调用succ方法来去重
-      timestamp.succ!
+    if check_dir then
+      while File.exist?(File.join(store_dir, "#{timestamp}_#{ascii}"))
+        #如果生成的文件名与目录中的文件相冲突则调用succ方法来去重
+        timestamp.succ!
+      end
+      "#{timestamp}_#{ascii}"
     end
-    "#{timestamp}_#{ascii}"
   end
 
   #由filename来得到ContentType
