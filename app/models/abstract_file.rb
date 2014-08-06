@@ -133,11 +133,16 @@ end
     m=self.filename_suffix(filename)
     case m
     when 'gif' then  return'image/gif'
-    when 'jpg' , 'jpeg' ,'jpe' then return 'image/jpeg'
+    when 'jpg','jpeg','jpe' then return 'image/jpeg'
     when 'png' then return 'image/png'
-    when 'tiff, tif'then return 'image/tiff'
+    when 'tiff','tif' then return 'image/tiff'
     when  "bmp" then return "image/x-ms-bmp"
     when 'xpm' then return "image/x-xpixmap"
+    when "ico" then return "image/x-icon"
+    when "xq","xql","xquery","xsd","xsl","xslt","xml","wsdl","dtd" then return "text/xml"
+    when "txt" then return "text/plain"
+    when "rtf","dot","doc","docx" then return "application/msword"
+    when "htm","html","htx" then return "text/html"
     end
   end
 end
