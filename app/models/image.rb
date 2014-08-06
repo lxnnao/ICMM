@@ -3,17 +3,20 @@ class Image < ActiveRecord::Base
 
 
     # def file_size_limit
-    #    4*1024
+    #    7*1024*1024
     # end
 
 	# def store_dir
 	# 	  "#{Rails.root}/files"
 	# end
-	# def validate
-    #     if self.filesize > file_size_limit
-    #       self.errors.add("file_size_limit", "贴图文件太大，#{file_size_limit}应不能超过50KB")
-    #     end
-	# end
+	def validate
+		if self.content_type != nil
+		    # 校验上传图片的文件类型
+		    unless self.content_type =~ /^image/
+		      self.errors.add(:content_type, "贴图不是合法的图片文件")
+		    end
+		end
+	end
 
 	#在保存image对象之前将上传的文件得到并保存在服务器上的目录中(已内置)
 	# before_save do

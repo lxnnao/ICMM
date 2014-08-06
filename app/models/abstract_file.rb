@@ -2,17 +2,13 @@ module AbstractFile
   #上传的文件在服务器端上的目录路径
   #cattr_accessor :storage_path
   @@storage_path = "#{Rails.root}/files"
-  @@size_limit=4*1024
+  @@size_limit=7*1024*1024
 def validate_inner
     validate
   # 验证title不能为空
   self.errors.add(:filename, "标题不能为空") if self.filename.empty?
   # 下面校验上传的图片
   if self.content_type != nil
-    # 校验上传图片的文件类型
-    unless self.content_type =~ /^image/
-      self.errors.add(:content_type, "贴图不是合法的图片文件")
-    end
     if self.filesize != nil
       # 校验上传图片的文件大小
       if self.filesize > file_size_limit
