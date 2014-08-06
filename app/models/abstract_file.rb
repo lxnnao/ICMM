@@ -27,7 +27,7 @@ end
 	      if @temp_file.size > 0
 	      	transaction do
 		        self.filename = sanitize_filename(@temp_file.original_filename)
-		        self.disk_filename =AbstractFile.disk_filename(filename)
+		        self.disk_filename =get_disk_filename(filename)
 		        self.content_type = @temp_file.content_type.to_s.chomp
 		        if content_type.blank?
 		          self.content_type = content_type_by_filename(filename)
@@ -82,7 +82,7 @@ end
 
   #返回文件在服务端的地址
   def diskfile
-    "#{@@storage_path}/#{self.disk_filename}"
+    "#{store_dir}/#{self.disk_filename}"
   end
 
 
@@ -107,7 +107,7 @@ end
 
   # Returns an ASCII or hashed filename
   # 返回一个由时ascii码与时间截组成的文件名
-  def self.disk_filename(filename)
+  def get_disk_filename(filename)
     #得到当前的时间截
     timestamp = DateTime.now.strftime("%y%m%d%H%M%S")
     ascii = ''
@@ -119,7 +119,8 @@ end
       ascii << $1 if filename =~ %r{(\.[a-zA-Z0-9]+)$}
     end
     #判断当前目录中是否存在生成的文件
-    while File.exist?(File.join(@@storage_path, "#{timestamp}_#{ascii}"))
+
+    while File.exist?(File.join(store_dir, "#{timestamp}_#{ascii}"))
       #如果生成的文件名与目录中的文件相冲突则调用succ方法来去重
       timestamp.succ!
     end
