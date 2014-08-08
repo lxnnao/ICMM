@@ -1,12 +1,20 @@
 Icome::Application.routes.draw do
-  resources :images
-  match  '/images/upload',:via => [:get, :post]
+  #match 'images/upload' ,to: =>'images#upload'
+  match 'images/uploads' => 'images#upload', via: [:get,:post]
+  match 'activities/uploads' => 'images#upload', via: [:get]
+  resources :images do
+    member do
+      post 'upload'
+      post 'upload_input'
+    end
+  end
   resources :surveys do
     member do
       post 'display'
       get 'display'
     end
   end
+
   resources :file_manages do
     member do
       post 'upload'
@@ -21,9 +29,13 @@ Icome::Application.routes.draw do
   resources :employees
 
   resources :activities do
+    resource :images  do
+         post 'upload_input'
+      end
     member do
       post 'join'
       post 'volunteer'
+      post 'upload_image'
     end
   end
 
