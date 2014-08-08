@@ -12,7 +12,7 @@ def validate_inner
     if self.filesize != nil
       # 校验上传图片的文件大小
       if self.filesize > file_size_limit
-        self.errors.add("file_size_limit", "贴图文件太大，#{file_size_limit}应不能超过50KB")
+        self.errors.add("file_size_limit", "图片文件太大，应不能超过#{file_size_limit/1024}KB")
       end
     end
   end
@@ -44,8 +44,9 @@ end
   end
 
   #保存由文件域上传提交的文件
-  def attach_files(file_field, description=nil)
+  def attach_files(file_field, description=nil,author_id=nil)
       self.description=description
+      self.author_id=author_id
       self.file= file_field
       self.validate_inner
       if errors.blank? then

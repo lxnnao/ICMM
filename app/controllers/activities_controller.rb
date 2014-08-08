@@ -3,6 +3,11 @@ class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy,:join,:volunteer]
   #before_filter :authenticate_user!, only: [:new,:create,:edit, :update, :destroy]
   # GET /activities
+  def upload_image
+      @idtest=params[:id]
+    render 'upload'
+  end
+
 
   def index
     @activities = Activity.includes(:contactor).all

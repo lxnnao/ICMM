@@ -3,7 +3,7 @@ class Image < ActiveRecord::Base
 
 
     # def file_size_limit
-    #    7*1024*1024
+    #    1024
     # end
 
 	# def store_dir
@@ -27,7 +27,7 @@ class Image < ActiveRecord::Base
 	# end
 
 	#保存由文件域上传提交的文件
-	def self.attach_files(file_field, description=nil)
+	def self.attach_files(file_field, description=nil,author_id=nil)
 		if file_field&&file_field.size > 0   #这里的作者用于测试
 	        image=Image.new()
 	        image.image_id=100
