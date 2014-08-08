@@ -1,13 +1,17 @@
-<%= form_for(@activity) do |f| %>
+
   <div class="page-sidebar " style="background-color:#1d1d1d !important">
         <div class="tile image bg-color-green outline-color-red">
             <div  class="tile-content tile image">
               <img src="/srcImg/edit_ioc.jpg" alt="">
             </div>
         </div>
+        <%= button_to "upload", upload_input_activity_images_path(@activity) %>
+
+        <%= form_for(@activity) do |f| %>
         <div class="actions">
           <%= f.submit %>
         </div>
+
   </div>
   <div class="page-region">
     <div class="page-region-content">

@@ -1,0 +1,4 @@
+<%= form_tag({:controler =>"images",:action => :upload} ,:multipart => true) %>
+<%= text_field_tag :imgTitle  %>
+<label >Image to Upload3333</label> <%= file_field_tag :imgFile  %></br>
+<%= submit_tag 'Upload'%>

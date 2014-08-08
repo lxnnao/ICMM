@@ -1,0 +1,10 @@
+<%= form_tag({:controller =>"images",:action => :upload} ,:multipart => true) %>
+<br/>
+<br/>
+<br/>
+<label ><%= :imgTitle %>---<%=@idtest%></label><br/>
+<%= text_field_tag :imgTitle  %><br/>
+<label >Image to Upload111111:</label><br/>
+<%= file_field_tag :imgFile  %><br/>
+<%= hidden_field_tag :author_id, @idtest %>
+<%= submit_tag 'Upload'%>
